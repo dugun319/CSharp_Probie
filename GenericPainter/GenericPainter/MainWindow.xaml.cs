@@ -130,7 +130,7 @@ namespace GenericPainter
             prePosition = e.GetPosition(canvas);
             nowPosition = prePosition;
             mycolor = Brushes.Black;
-            fillColor = Brushes.White;
+            fillColor = Brushes.Transparent;
             StrokeThicknessValue = 2;
 
             var clickedObject = e.OriginalSource as UIElement;
@@ -379,6 +379,10 @@ namespace GenericPainter
                 double width = nowPosition.X - circleStartPoint.X;
                 double height = nowPosition.Y - circleStartPoint.Y;
 
+                double left = circleStartPoint.X;
+                double top = circleStartPoint.Y;
+
+
                 /*
                 // 원그리기(타원이 아닌 정원)
                 if (Math.Abs(width) > Math.Abs(height))
@@ -391,12 +395,24 @@ namespace GenericPainter
                 }
                 */
 
-                // 원의 위치 설정
-                Canvas.SetLeft(currentEllipse, circleStartPoint.X);
-                Canvas.SetTop(currentEllipse, circleStartPoint.Y);
+                // 마우스를 왼쪽/위쪽으로 드래그한 경우 크기와 위치 반전
+                if (width < 0)
+                {
+                    left += width;
+                    width = Math.Abs(width);
+                }
+                if (height < 0)
+                {
+                    top += height; // 시작점을 위쪽으로 이동
+                    height = Math.Abs(height); // 높이를 양수로 변환
+                }
 
-                currentEllipse.Width = Math.Abs(width);
-                currentEllipse.Height = Math.Abs(height);
+                // 원의 위치 설정
+                Canvas.SetLeft(currentEllipse, left);
+                Canvas.SetTop(currentEllipse, top);
+
+                currentEllipse.Width = width;
+                currentEllipse.Height = height;
             }
 
             if (isDragging && selectedEllipse != null)
@@ -613,7 +629,7 @@ namespace GenericPainter
             {
                 if (child is Ellipse ellipss)
                 {
-                    ellipss.Fill = fillColor;
+                    ellipse.Fill = fillColor;
                 }
             }
             */
@@ -1255,35 +1271,25 @@ namespace GenericPainter
                 // 파일이 존재하는지 확인
                 if (File.Exists(lineFilePath))
                 {
-                    // 파일 핸들러를 사용하여 JSON 데이터를 읽기
-                    using (FileStream fs = new FileStream(lineFilePath, FileMode.Open, FileAccess.Read))
+                    string json = File.ReadAllText(lineFilePath);
+                    var drawingData = JsonConvert.DeserializeObject<DrawingData>(json);
+
+                    // 각 선을 캔버스에 다시 그리기
+                    foreach (var lineData in drawingData.Lines)
                     {
-                        using (StreamReader reader = new StreamReader(fs))
+                        // Line 객체 생성
+                        var line = new Line
                         {
-                            // JSON 문자열 읽기
-                            string json = reader.ReadToEnd();
+                            X1 = lineData.X1,
+                            Y1 = lineData.Y1,
+                            X2 = lineData.X2,
+                            Y2 = lineData.Y2,
+                            Stroke = new SolidColorBrush((Color)ColorConverter.ConvertFromString(lineData.Color)),
+                            StrokeThickness = lineData.StrokeThickness
+                        };
 
-                            // JSON을 DrawingData 객체로 역직렬화
-                            var drawingData = JsonConvert.DeserializeObject<DrawingData>(json);
-
-                            // 각 선을 캔버스에 다시 그리기
-                            foreach (var lineData in drawingData.Lines)
-                            {
-                                // Line 객체 생성
-                                var line = new Line
-                                {
-                                    X1 = lineData.X1,
-                                    Y1 = lineData.Y1,
-                                    X2 = lineData.X2,
-                                    Y2 = lineData.Y2,
-                                    Stroke = new SolidColorBrush((Color)ColorConverter.ConvertFromString(lineData.Color)),
-                                    StrokeThickness = lineData.StrokeThickness
-                                };
-
-                                // 캔버스에 선 추가
-                                canvas.Children.Add(line);
-                            }
-                        }
+                        // 캔버스에 선 추가
+                        canvas.Children.Add(line);
                     }
                 }
                 else
@@ -1309,8 +1315,6 @@ namespace GenericPainter
 
                         Canvas.SetLeft(rectangle, rectangleData.X);
                         Canvas.SetTop(rectangle, rectangleData.Y);
-
-                        MessageBox.Show($"{rectangle}");
 
                         canvas.Children.Add(rectangle);
                     }
@@ -1339,8 +1343,6 @@ namespace GenericPainter
 
                         Canvas.SetLeft(ellipse, ellipseData.X);
                         Canvas.SetTop(ellipse, ellipseData.Y);
-
-                        MessageBox.Show($"{ellipse}");
 
                         canvas.Children.Add(ellipse);
                     }
@@ -1584,6 +1586,9 @@ namespace GenericPainter
                 double height = ellipse.Height;
 
                 /*
+                 * 
+                 * 핸들 중앙으로 이동 / 계산합시다.
+                 * 
                 Canvas.SetLeft(resizeHandleTopLeft, left + width / 2);
                 Canvas.SetTop(resizeHandleTopLeft, top - resizeHandleTopLeft.Height / 2);
 

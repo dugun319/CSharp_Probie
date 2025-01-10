@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Git\\CSharp\\KH_project\\GenericPainter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|GenericPainter||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{B212868A-8459-43BB-9E14-91725DF78552}|GenericPainter\\GenericPainter.csproj|C:\\Git\\CSharp\\KH_project\\GenericPainter\\genericpainter\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B212868A-8459-43BB-9E14-91725DF78552}|GenericPainter\\GenericPainter.csproj|solutionrelative:genericpainter\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B212868A-8459-43BB-9E14-91725DF78552}|GenericPainter\\GenericPainter.csproj|c:\\git\\csharp\\kh_project\\genericpainter\\genericpainter\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B212868A-8459-43BB-9E14-91725DF78552}|GenericPainter\\GenericPainter.csproj|solutionrelative:genericpainter\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|GenericPainter||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B212868A-8459-43BB-9E14-91725DF78552}|GenericPainter\\GenericPainter.csproj|c:\\git\\csharp\\kh_project\\genericpainter\\genericpainter\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -24,7 +24,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 285,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -40,7 +40,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GenericPainter",
               "DocumentMoniker": "C:\\Git\\CSharp\\KH_project\\GenericPainter\\GenericPainter\\GenericPainter.csproj",
               "RelativeDocumentMoniker": "GenericPainter\\GenericPainter.csproj",
@@ -52,13 +52,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Git\\CSharp\\KH_project\\GenericPainter\\GenericPainter\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "GenericPainter\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Git\\CSharp\\KH_project\\GenericPainter\\GenericPainter\\MainWindow.xaml.cs",
               "RelativeToolTip": "GenericPainter\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAP8EAAAAAAAAAAAQwB0FAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAQwIQAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-08T04:38:37.089Z",
               "EditorCaption": ""
