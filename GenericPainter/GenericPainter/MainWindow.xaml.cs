@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static GenericPainter.MainWindow;
 using Path = System.IO.Path;
 
 namespace GenericPainter
@@ -24,7 +25,7 @@ namespace GenericPainter
     public partial class MainWindow : Window
     {
 
-        private bool mCliked = false;
+        private bool mClicked = false;
         private bool lineClicked = false;
         private bool freeLineClicked = false;
         private bool rectangleClicked = false;
@@ -37,6 +38,7 @@ namespace GenericPainter
         private List<LineData> lineDataList = new List<LineData>();     //직선 Data
         private Brush mycolor;
         private Brush fillColor;
+        private double StrokeThicknessValue;
 
         private UIElement selectedShape = null;     // 이전 선택도형 확인
 
@@ -49,7 +51,7 @@ namespace GenericPainter
         // 사각형
         private Rectangle currentRectangle;
         private Rectangle selectedRectangle;
-        
+
         private Point prePosition;
         private Point nowPosition;
 
@@ -89,27 +91,47 @@ namespace GenericPainter
             public List<LineData> Lines { get; set; } = new List<LineData>();
         }
 
+        public class ShapeData
+        {
+            public double X { get; set; }
+            public double Y { get; set; }
+            public double Width { get; set; }
+            public double Height { get; set; }
+            public string FillColor { get; set; }
+            public double StrokeThickness { get; set; }
+        }
+
+        public class RectangleData : ShapeData
+        {
+            // 사각형 특화데이터 추가 가능
+        }
+
+        public class EllipseData : ShapeData
+        {
+            // 원 특화데이터 추가 가능
+        }
+
 
         // 빈 캔버스를 누르면 반응 (resizeHamdler 삭제를 위한 것인데 수정이 필요함)
-        private void blankCanvas_click(object sender, MouseButtonEventArgs e)
+        private void canvas_MouseLeave(object sender, MouseEventArgs e)
         {
-            RemoveResizeHandles();
+            // RemoveResizeHandles();
 
-            lineClicked = false;
-            freeLineClicked = false;
-            rectangleClicked = false;
-            circleClicked = false;
-            eraserClicked = false;
+            if (isDragging)
+            {
+                isDragging = false; // 드래깅 상태 중지
+            }
         }
         // Function for Mouse
 
         private void canvas_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            mCliked = true;
+            mClicked = true;
             prePosition = e.GetPosition(canvas);
             nowPosition = prePosition;
             mycolor = Brushes.Black;
             fillColor = Brushes.White;
+            StrokeThicknessValue = 2;
 
             var clickedObject = e.OriginalSource as UIElement;
 
@@ -119,7 +141,7 @@ namespace GenericPainter
                 currentLine.X1 = prePosition.X;
                 currentLine.Y1 = prePosition.Y;
                 currentLine.Stroke = mycolor;
-                currentLine.StrokeThickness = 2;
+                currentLine.StrokeThickness = StrokeThicknessValue;
 
                 canvas.Children.Add(currentLine);
 
@@ -143,7 +165,7 @@ namespace GenericPainter
                     X2 = prePosition.X,
                     Y2 = prePosition.Y,
                     Stroke = mycolor,
-                    StrokeThickness = 2
+                    StrokeThickness = StrokeThicknessValue
                 };
 
                 freehandLines.Add(line);
@@ -154,9 +176,9 @@ namespace GenericPainter
             {
                 currentEllipse = new Ellipse
                 {
-                    Stroke = Brushes.Blue,  // 원의 테두리 색
+                    Stroke = mycolor,       // 원의 테두리 색
                     Fill = fillColor,       // 원의 채우기 색
-                    StrokeThickness = 2
+                    StrokeThickness = StrokeThicknessValue
                 };
 
                 // 원 그리기를 시작하는 지점
@@ -170,16 +192,16 @@ namespace GenericPainter
             {
                 currentRectangle = new Rectangle
                 {
-                    Stroke = Brushes.Plum,
-                    Fill = fillColor,  // 색상 변경 적용
-                    Opacity = 0.8
+                    Stroke = mycolor,
+                    Fill = fillColor,
+                    StrokeThickness = StrokeThicknessValue
                 };
 
                 // Canvas에 추가
                 canvas.Children.Add(currentRectangle);
             }
 
-            
+
             if (clickedObject is Ellipse clickedEllipse)
             {
                 if (selectedShape != null)
@@ -187,17 +209,16 @@ namespace GenericPainter
                     if (selectedShape is Ellipse prevEllipse)
                     {
                         prevEllipse.Stroke = Brushes.Black;
-                        prevEllipse.StrokeThickness = 1;
+                        prevEllipse.StrokeThickness = StrokeThicknessValue;
                     }
                     else if (selectedShape is Rectangle prevRectangle)
                     {
                         prevRectangle.Stroke = Brushes.Black;
-                        prevRectangle.StrokeThickness = 1;
+                        prevRectangle.StrokeThickness = StrokeThicknessValue;
                     }
                 }
 
                 selectedShape = clickedEllipse;
-
                 selectedEllipse = clickedEllipse;
 
                 selectedEllipse.Stroke = Brushes.Red;
@@ -206,6 +227,7 @@ namespace GenericPainter
                 isDragging = true;
                 previousPosition = e.GetPosition(canvas);
 
+                CreateResizeHandles(selectedEllipse);
                 circleClicked = false;
             }
             else
@@ -221,12 +243,12 @@ namespace GenericPainter
                     if (selectedShape is Ellipse prevEllipse)
                     {
                         prevEllipse.Stroke = Brushes.Black;
-                        prevEllipse.StrokeThickness = 1;
+                        prevEllipse.StrokeThickness = StrokeThicknessValue;
                     }
                     else if (selectedShape is Rectangle prevRectangle)
                     {
                         prevRectangle.Stroke = Brushes.Black;
-                        prevRectangle.StrokeThickness = 1;
+                        prevRectangle.StrokeThickness = StrokeThicknessValue;
                     }
                 }
 
@@ -250,7 +272,7 @@ namespace GenericPainter
             {
                 selectedRectangle = null;  // 사각형이 아니면 선택된 객체를 null로 설정
             }
-            
+
 
 
             if (eraserClicked && isErasing)
@@ -274,13 +296,13 @@ namespace GenericPainter
                         else if (hitObject.VisualHit is Rectangle rectangle)
                         {
                             canvas.Children.Remove(rectangle);
-                           
+
                         }
                     }
                 }
                 else
                 {
-                    mCliked = true;
+                    mClicked = true;
                     prePosition = e.GetPosition(canvas);
                     nowPosition = prePosition;
                     mycolor = Brushes.Black;
@@ -292,11 +314,13 @@ namespace GenericPainter
 
         private void canvas_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            mCliked = false;
+            mClicked = false;
             isDragging = false;         // 이동 종료
 
+            /*
             currentRectangle = null;    // 사각형 그리기 종료
             currentEllipse = null;
+            */
 
             if (isErasing)
             {
@@ -306,7 +330,7 @@ namespace GenericPainter
 
         private void canvas_MouseMove(object sender, MouseEventArgs e)
         {
-            if (mCliked && lineClicked && currentLine != null)
+            if (mClicked && lineClicked && currentLine != null)
             {
                 var nowPosition = e.GetPosition(canvas);
 
@@ -320,7 +344,7 @@ namespace GenericPainter
                 currentLineData.Y2 = nowPosition.Y;
             }
 
-            if (mCliked && freeLineClicked)
+            if (mClicked && freeLineClicked)
             {
                 var nowPosition = e.GetPosition(canvas);
 
@@ -339,7 +363,7 @@ namespace GenericPainter
                         X2 = nowPosition.X,
                         Y2 = nowPosition.Y,
                         Stroke = mycolor,
-                        StrokeThickness = 2
+                        StrokeThickness = StrokeThicknessValue
                     };
 
                     freehandLines.Add(newLine);
@@ -347,7 +371,7 @@ namespace GenericPainter
                 }
             }
 
-            if (mCliked && circleClicked && currentEllipse != null)
+            if (mClicked && circleClicked && currentEllipse != null)
             {
                 nowPosition = e.GetPosition(canvas);
 
@@ -393,7 +417,7 @@ namespace GenericPainter
             }
 
 
-            if (mCliked && rectangleClicked && currentRectangle != null)
+            if (mClicked && rectangleClicked && currentRectangle != null)
             {
                 // 마우스 움직임에 따라 사각형의 크기와 위치 계산
                 nowPosition = e.GetPosition(canvas);
@@ -443,7 +467,7 @@ namespace GenericPainter
                 RemoveResizeHandles();
             }
 
-            if (mCliked && eraserClicked && isErasing)
+            if (mClicked && eraserClicked && isErasing)
             {
                 if (e.LeftButton == MouseButtonState.Pressed)
                 {
@@ -554,7 +578,7 @@ namespace GenericPainter
             else
             {
                 // 지우개 모드 비활성화
-                canvas.Cursor = Cursors.Cross;
+                canvas.Cursor = Cursors.Arrow;
             }
         }
 
@@ -584,29 +608,74 @@ namespace GenericPainter
         private void UpdateCircleColor()
         {
             /*
-            // 이미 그려진 사각형들에 대해 색상 업데이트
+            // 이미 그려진 원들에 대해 색상 업데이트
             foreach (var child in canvas.Children)
             {
-                if (child is Rectangle rectangle)
+                if (child is Ellipse ellipss)
                 {
-                    rectangle.Fill = fillColor;
+                    ellipss.Fill = fillColor;
                 }
             }
             */
 
-            // 선택된 사각형이 있을 경우 색상 업데이트
+            // 선택된 원이 있을 경우 색상 업데이트
             if (selectedEllipse != null)
             {
-                // 선택된 사각형에 색상 적용
+                // 선택된 원에 색상 적용
                 selectedEllipse.Fill = fillColor;
             }
         }
 
-
+        /*
         private void comboBox_SelectionChanged(object sender, RoutedEventArgs e)
         {
+            ComboBox comboBox = sender as ComboBox;
+            double comboboxValue;
 
+            if (comboBox != null && comboBox.SelectedItem != null)
+            {
+
+                ComboBoxItem selectedItem = comboBox.SelectedItem as ComboBoxItem;
+
+                if(selectedItem != null && selectedItem.Content != null)
+                {
+                    string selectedValue = selectedItem.Content.ToString();
+                    if (double.TryParse(selectedValue, out comboboxValue))
+                    {
+                        // 변환 성공, comboboxValue에 값이 저장됨
+                        MessageBox.Show($"선택된 값: {comboboxValue}");
+
+                        if (selectedRectangle != null)
+                        {
+                            // 선택된 사각형에 색상 적용
+                            selectedRectangle.StrokeThickness = comboboxValue;
+                        }
+                        else if (selectedEllipse != null)
+                        {
+                            selectedEllipse.StrokeThickness = comboboxValue;
+                        }
+                        else if (currentLine != null)
+                        {
+                            currentLine.StrokeThickness = comboboxValue;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("선택된 항목이 숫자가 아닙니다.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("선택된 항목이 ComboBox Item이 아닙니다.");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("선택된 항목이 없습니다.");
+            }
         }
+        */
 
         // 색상 버튼 클릭 시
         private void color_black_click(object sender, RoutedEventArgs e)
@@ -624,7 +693,7 @@ namespace GenericPainter
                     UpdateRectangleColor();
                 }
             }
-            
+
         }
 
         private void color_white_click(object sender, RoutedEventArgs e)
@@ -814,18 +883,17 @@ namespace GenericPainter
                 }
             }
         }
-
-
-
-
+        /*
         private void button_jsonSave_click(object sender, RoutedEventArgs e)
         {
             //fileName은 test로 지정
-            var fileName = "test.json";
+            var fileName = "line.json";
+            var fileName2 = "shape.json";
 
             // filePath를 다운로드 폴더로 지정
             string downloadsFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
             string filePath = Path.Combine(downloadsFolder, fileName);
+            string filePath2 = Path.Combine(downloadsFolder, fileName2);
 
             try
             {
@@ -859,7 +927,78 @@ namespace GenericPainter
                     drawingData.Lines.Add(lineData);
                 }
 
+                List<ShapeData> shapes = new List<ShapeData>();
+                if (currentRectangle != null)
+                {
+                    shapes.Add(new RectangleData
+                    {
+                        X = Canvas.GetLeft(currentRectangle),
+                        Y = Canvas.GetTop(currentRectangle),
+                        Width = currentRectangle.Width,
+                        Height = currentRectangle.Height,
+                        FillColor = (currentRectangle.Fill as SolidColorBrush)?.Color.ToString() ?? "#010101",
+                        StrokeThickness = currentRectangle.StrokeThickness
+                    });
+
+                    //MessageBox.Show("사각형이 있습니다");
+                }
+                else
+                {
+                    //MessageBox.Show("사각형이 없습니다");
+                }
+
+                if (selectedRectangle != null)
+                {
+                    shapes.Add(new RectangleData
+                    {
+                        X = Canvas.GetLeft(selectedRectangle),
+                        Y = Canvas.GetTop(selectedRectangle),
+                        Width = selectedRectangle.Width,
+                        Height = selectedRectangle.Height,
+                        FillColor = (selectedRectangle.Fill as SolidColorBrush)?.Color.ToString() ?? "#010101",
+                        StrokeThickness = selectedRectangle.StrokeThickness
+                    });
+                }
+                else
+                {
+                }
+
+                if (currentEllipse != null)
+                {
+                    shapes.Add(new EllipseData
+                    {
+                        X = Canvas.GetLeft(currentEllipse),
+                        Y = Canvas.GetTop(currentEllipse),
+                        Width = currentEllipse.Width,
+                        Height = currentEllipse.Height,
+                        FillColor = (currentEllipse.Fill as SolidColorBrush)?.Color.ToString() ?? "#010101",
+                        StrokeThickness = currentEllipse.StrokeThickness
+                    });
+                }
+                else
+                {
+                }
+
+                if (selectedEllipse != null)
+                {
+                    shapes.Add(new EllipseData
+                    {
+                        X = Canvas.GetLeft(selectedEllipse),
+                        Y = Canvas.GetTop(selectedEllipse),
+                        Width = selectedEllipse.Width,
+                        Height = selectedEllipse.Height,
+                        FillColor = (selectedEllipse.Fill as SolidColorBrush)?.Color.ToString() ?? "#010101",
+                        StrokeThickness = selectedEllipse.StrokeThickness
+                    });
+                }
+                else
+                {
+                }
+
+
                 string json = JsonConvert.SerializeObject(drawingData, Formatting.Indented);
+
+                string shapeJson = JsonConvert.SerializeObject(shapes, Formatting.Indented);
 
                 using (FileStream fs = new FileStream(filePath, FileMode.Create, FileAccess.Write))
                 {
@@ -870,6 +1009,15 @@ namespace GenericPainter
                     }
                 }
                 MessageBox.Show($"파일이 저장되었습니다: {filePath}");
+
+                using (FileStream fs = new FileStream(filePath2, FileMode.Create, FileAccess.Write))
+                {
+
+                    using (StreamWriter writer = new StreamWriter(fs))
+                    {
+                        writer.Write(shapeJson);
+                    }
+                }
 
             }
             catch (UnauthorizedAccessException ex)
@@ -897,14 +1045,198 @@ namespace GenericPainter
                 // 기타 모든 오류
                 MessageBox.Show($"알 수 없는 오류 발생: {ex.Message}", "오류", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        } 
+        */
+
+        private void button_jsonSave_click(object sender, RoutedEventArgs e)
+        {
+            var lineFileName = "line.json";
+            var rectFileName = "rect.json";
+            var elliFileName = "elli.json";
+
+            // filePath를 다운로드 폴더로 지정
+            string downloadsFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
+            string lineFilePath = Path.Combine(downloadsFolder, lineFileName);
+            string rectFilePath = Path.Combine(downloadsFolder, rectFileName);
+            string elliFilePath = Path.Combine(downloadsFolder, elliFileName);
+
+            try
+            {
+                if (!Directory.Exists(downloadsFolder))
+                {
+                    Directory.CreateDirectory(downloadsFolder);
+                }
+
+                var drawingData = new DrawingData();
+
+                // 직선 데이터 추가
+                if (lineDataList != null)
+                {
+                    drawingData.Lines.AddRange(lineDataList);
+                }
+
+                // 자유곡선 데이터 추가
+                foreach (var line in freehandLines)
+                {
+                    // 각 선의 좌표와 색상 저장
+                    var lineData = new LineData
+                    {
+                        X1 = line.X1,
+                        Y1 = line.Y1,
+                        X2 = line.X2,
+                        Y2 = line.Y2,
+                        Color = ((SolidColorBrush)line.Stroke).Color.ToString(),
+                        StrokeThickness = line.StrokeThickness
+                    };
+
+                    drawingData.Lines.Add(lineData);
+                }
+
+                List<RectangleData> rect = new List<RectangleData>();
+                if (currentRectangle != null)
+                {
+                    rect.Add(new RectangleData
+                    {
+                        X = Canvas.GetLeft(currentRectangle),
+                        Y = Canvas.GetTop(currentRectangle),
+                        Width = currentRectangle.Width,
+                        Height = currentRectangle.Height,
+                        FillColor = (currentRectangle.Fill as SolidColorBrush)?.Color.ToString() ?? "#010101",
+                        StrokeThickness = currentRectangle.StrokeThickness
+                    });
+
+                    //MessageBox.Show("사각형이 있습니다");
+                }
+                else
+                {
+                    //MessageBox.Show("사각형이 없습니다");
+                }
 
 
+                if (selectedRectangle != null)
+                {
+                    rect.Add(new RectangleData
+                    {
+                        X = Canvas.GetLeft(selectedRectangle),
+                        Y = Canvas.GetTop(selectedRectangle),
+                        Width = selectedRectangle.Width,
+                        Height = selectedRectangle.Height,
+                        FillColor = (selectedRectangle.Fill as SolidColorBrush)?.Color.ToString() ?? "#010101",
+                        StrokeThickness = selectedRectangle.StrokeThickness
+                    });
+                }
+                else
+                {
+                }
+
+
+                List<EllipseData> elli = new List<EllipseData>();
+
+                if (currentEllipse != null)
+                {
+                    elli.Add(new EllipseData
+                    {
+                        X = Canvas.GetLeft(currentEllipse),
+                        Y = Canvas.GetTop(currentEllipse),
+                        Width = currentEllipse.Width,
+                        Height = currentEllipse.Height,
+                        FillColor = (currentEllipse.Fill as SolidColorBrush)?.Color.ToString() ?? "#010101",
+                        StrokeThickness = currentEllipse.StrokeThickness
+                    });
+                }
+                else
+                {
+                }
+
+                if (selectedEllipse != null)
+                {
+                    elli.Add(new EllipseData
+                    {
+                        X = Canvas.GetLeft(selectedEllipse),
+                        Y = Canvas.GetTop(selectedEllipse),
+                        Width = selectedEllipse.Width,
+                        Height = selectedEllipse.Height,
+                        FillColor = (selectedEllipse.Fill as SolidColorBrush)?.Color.ToString() ?? "#010101",
+                        StrokeThickness = selectedEllipse.StrokeThickness
+                    });
+                }
+                else
+                {
+                }
+
+
+                string lineJson = JsonConvert.SerializeObject(drawingData, Formatting.Indented);
+                string rectJson = JsonConvert.SerializeObject(rect, Formatting.Indented);
+                string elliJson = JsonConvert.SerializeObject(elli, Formatting.Indented);
+
+                using (FileStream fs = new FileStream(lineFilePath, FileMode.Create, FileAccess.Write))
+                {
+
+                    using (StreamWriter writer = new StreamWriter(fs))
+                    {
+                        writer.Write(lineJson);
+                    }
+                }
+                MessageBox.Show($"파일이 저장되었습니다: {lineFilePath}");
+
+                using (FileStream fs = new FileStream(rectFilePath, FileMode.Create, FileAccess.Write))
+                {
+
+                    using (StreamWriter writer = new StreamWriter(fs))
+                    {
+                        writer.Write(rectJson);
+                    }
+                }
+
+                using (FileStream fs = new FileStream(elliFilePath, FileMode.Create, FileAccess.Write))
+                {
+
+                    using (StreamWriter writer = new StreamWriter(fs))
+                    {
+                        writer.Write(elliJson);
+                    }
+                }
+
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                // 파일 접근 권한 오류
+                MessageBox.Show($"접근 권한 오류: {ex.Message}", "오류", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                // 폴더 찾을 수 없음 오류
+                MessageBox.Show($"폴더를 찾을 수 없습니다: {ex.Message}", "오류", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (IOException ex)
+            {
+                // IO 오류
+                MessageBox.Show($"파일 입출력 오류: {ex.Message}", "오류", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (JsonSerializationException ex)
+            {
+                // JSON 직렬화 오류
+                MessageBox.Show($"JSON 직렬화 오류: {ex.Message}", "오류", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (Exception ex)
+            {
+                // 기타 모든 오류
+                MessageBox.Show($"알 수 없는 오류 발생: {ex.Message}", "오류", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
+
 
         private void button_jsonLoad_click(object sender, RoutedEventArgs e)
         {
-            // fileName은 test로 지정
-            var fileName = "test.json";
+            var lineFileName = "line.json";
+            var rectFileName = "rect.json";
+            var elliFileName = "elli.json";
+
+            // filePath를 다운로드 폴더로 지정
+            string downloadsFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
+            string lineFilePath = Path.Combine(downloadsFolder, lineFileName);
+            string rectFilePath = Path.Combine(downloadsFolder, rectFileName);
+            string elliFilePath = Path.Combine(downloadsFolder, elliFileName);
 
             // filePath를 다운로드 폴더로 지정
             /*
@@ -914,16 +1246,17 @@ namespace GenericPainter
             예를 들어, "C:\\Git\\CSharp\\KH_project"와 같이 이스케이프 문자를 사용해야 하는 경우
             @"C:\Git\CSharp\KH_project"와 같이 문자열을 바로 쓸 수 있음
             */
-            string downloadsFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
-            string filePath = Path.Combine(downloadsFolder, fileName);
 
             try
             {
+                // 기존 캔버스 클리어
+                canvas.Children.Clear();
+
                 // 파일이 존재하는지 확인
-                if (File.Exists(filePath))
+                if (File.Exists(lineFilePath))
                 {
                     // 파일 핸들러를 사용하여 JSON 데이터를 읽기
-                    using (FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+                    using (FileStream fs = new FileStream(lineFilePath, FileMode.Open, FileAccess.Read))
                     {
                         using (StreamReader reader = new StreamReader(fs))
                         {
@@ -932,9 +1265,6 @@ namespace GenericPainter
 
                             // JSON을 DrawingData 객체로 역직렬화
                             var drawingData = JsonConvert.DeserializeObject<DrawingData>(json);
-
-                            // 기존 캔버스 클리어
-                            canvas.Children.Clear();
 
                             // 각 선을 캔버스에 다시 그리기
                             foreach (var lineData in drawingData.Lines)
@@ -955,6 +1285,66 @@ namespace GenericPainter
                             }
                         }
                     }
+                }
+                else
+                {
+                    MessageBox.Show("파일이 존재하지 않습니다.");
+                }
+
+                if (File.Exists(rectFilePath))
+                {
+
+                    string json = File.ReadAllText(rectFilePath);
+                    List<RectangleData> shapes = JsonConvert.DeserializeObject<List<RectangleData>>(json);
+
+                    foreach (RectangleData rectangleData in shapes)
+                    {
+                        var rectangle = new Rectangle
+                        {
+                            Width = rectangleData.Width,
+                            Height = rectangleData.Height,
+                            Stroke = Brushes.Black,
+                            StrokeThickness = 2
+                        };
+
+                        Canvas.SetLeft(rectangle, rectangleData.X);
+                        Canvas.SetTop(rectangle, rectangleData.Y);
+
+                        MessageBox.Show($"{rectangle}");
+
+                        canvas.Children.Add(rectangle);
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("파일이 존재하지 않습니다.");
+                }
+
+                if (File.Exists(elliFilePath))
+                {
+
+                    string json = File.ReadAllText(elliFilePath);
+                    List<EllipseData> shapes = JsonConvert.DeserializeObject<List<EllipseData>>(json);
+
+                    foreach (EllipseData ellipseData in shapes)
+                    {
+                        var ellipse = new Ellipse
+                        {
+                            Width = ellipseData.Width,
+                            Height = ellipseData.Height,
+                            Stroke = Brushes.Black,
+                            StrokeThickness = 2
+                        };
+
+                        Canvas.SetLeft(ellipse, ellipseData.X);
+                        Canvas.SetTop(ellipse, ellipseData.Y);
+
+                        MessageBox.Show($"{ellipse}");
+
+                        canvas.Children.Add(ellipse);
+                    }
+
                 }
                 else
                 {
@@ -990,10 +1380,21 @@ namespace GenericPainter
 
         private void button_free_click(object sender, RoutedEventArgs e)
         {
+            RemoveResizeHandles();
+
+            if (selectedShape is Ellipse prevEllipse)
+            {
+                prevEllipse.Stroke = Brushes.Black;
+                prevEllipse.StrokeThickness = 1;
+            }
+            else if (selectedShape is Rectangle prevRectangle)
+            {
+                prevRectangle.Stroke = Brushes.Black;
+                prevRectangle.StrokeThickness = 1;
+            }
+
             selectedShape = null;     // 이전 선택도형 확인
-            currentEllipse = null;
             selectedEllipse = null;
-            currentRectangle = null;
             selectedRectangle = null;
         }
 
@@ -1007,9 +1408,8 @@ namespace GenericPainter
 
         private void CreateResizeHandles(UIElement selectedElement)
         {
-            if(selectedElement is Rectangle)
+            if (selectedElement is Rectangle rectangle)
             {
-                Rectangle rectangle = (Rectangle) selectedElement;
                 if (rectangle == null)
                 {
                     throw new ArgumentNullException(nameof(rectangle), "사각형이 선택되지 않았습니다.");
@@ -1038,9 +1438,8 @@ namespace GenericPainter
                 PositionResizeHandles(rectangle);
 
             }
-            else if(selectedElement is Ellipse)
+            else if (selectedElement is Ellipse ellipse)
             {
-                Ellipse ellipse = (Ellipse) selectedElement;
                 if (ellipse == null)
                 {
                     throw new ArgumentNullException(nameof(ellipse), "원이 선택되지 않았습니다.");
@@ -1069,40 +1468,6 @@ namespace GenericPainter
             }
 
         }
-
-        /*
-        private void CreateResizeHandles(Rectangle rectangle)
-        {
-
-            if (rectangle == null)
-            {
-                throw new ArgumentNullException(nameof(rectangle), "사각형이 선택되지 않았습니다.");
-            }
-
-            // 기존 핸들 제거
-            RemoveResizeHandles();
-
-            // 사각형의 4모서리에 핸들을 생성합니다.
-            resizeHandleTopLeft = CreateResizeHandle(ResizeDirection.TopLeft);
-            resizeHandleTopRight = CreateResizeHandle(ResizeDirection.TopRight);
-            resizeHandleBottomLeft = CreateResizeHandle(ResizeDirection.BottomLeft);
-            resizeHandleBottomRight = CreateResizeHandle(ResizeDirection.BottomRight);
-
-            // 핸들을 캔버스에 추가
-            canvas.Children.Add(resizeHandleTopLeft);
-            canvas.Children.Add(resizeHandleTopRight);
-            canvas.Children.Add(resizeHandleBottomLeft);
-            canvas.Children.Add(resizeHandleBottomRight);
-
-            resizeHandles.Add(resizeHandleTopLeft);
-            resizeHandles.Add(resizeHandleTopRight);
-            resizeHandles.Add(resizeHandleBottomLeft);
-            resizeHandles.Add(resizeHandleBottomRight);
-
-            // 핸들의 위치를 사각형에 맞춰 설정
-            PositionResizeHandles(rectangle);
-        }
-        */
 
 
         private enum ResizeDirection
@@ -1138,7 +1503,7 @@ namespace GenericPainter
                     ResizeRectangle(selectedRectangle, direction, currentPoint);
                     e.Handled = true;
                 }
-                else if(isResizing && selectedEllipse != null)
+                else if (isResizing && selectedEllipse != null)
                 {
                     var currentPoint = e.GetPosition(canvas);
                     ResizeEllipse(selectedEllipse, direction, currentPoint);
@@ -1153,7 +1518,15 @@ namespace GenericPainter
                 RemoveResizeHandles();
             };
 
+            handle.MouseLeave += resizeHandl_MouseLeave;
+
             return handle;
+        }
+
+        private void resizeHandl_MouseLeave(object sender, EventArgs e)
+        {
+            isResizing = false;
+            RemoveResizeHandles();
         }
 
         private void RemoveResizeHandles()
@@ -1205,29 +1578,25 @@ namespace GenericPainter
             else if (selectedElement is Ellipse ellipse)
             {
 
-                /*
-                 * 
-                Ellipse ellipse = (Ellipse)selectedElement;
-                 * 
-                if (ellipse == null)
-
-                    if (ellipse == null)
-                    {
-                        throw new ArgumentNullException(nameof(ellipse), "원이 선택되지 않았습니다.");
-                    }
-
-                    // 각 핸들이 null인지 확인
-                    if (resizeHandleTopLeft == null || resizeHandleTopRight == null || resizeHandleBottomLeft == null || resizeHandleBottomRight == null)
-                    {
-                        throw new InvalidOperationException("Resize 핸들이 초기화되지 않았습니다.");
-                    }
-                */
-
-                // 사각형의 위치에 맞춰 핸들을 배치
                 double left = Canvas.GetLeft(ellipse);
                 double top = Canvas.GetTop(ellipse);
                 double width = ellipse.Width;
                 double height = ellipse.Height;
+
+                /*
+                Canvas.SetLeft(resizeHandleTopLeft, left + width / 2);
+                Canvas.SetTop(resizeHandleTopLeft, top - resizeHandleTopLeft.Height / 2);
+
+                Canvas.SetLeft(resizeHandleTopRight, left + width - resizeHandleTopLeft.Height / 2);
+                Canvas.SetTop(resizeHandleTopRight, top - height / 2);
+
+                Canvas.SetLeft(resizeHandleBottomLeft, left + width / 2);
+                Canvas.SetTop(resizeHandleBottomLeft, Top + height - resizeHandleBottomLeft.Height / 2);
+
+                Canvas.SetLeft(resizeHandleBottomRight, left);
+                Canvas.SetTop(resizeHandleBottomRight, top - height / 2 - resizeHandleBottomRight.Height / 2);
+                */
+
 
                 Canvas.SetLeft(resizeHandleTopLeft, left - resizeHandleTopLeft.Width / 2);
                 Canvas.SetTop(resizeHandleTopLeft, top - resizeHandleTopLeft.Height / 2);
@@ -1240,45 +1609,9 @@ namespace GenericPainter
 
                 Canvas.SetLeft(resizeHandleBottomRight, left + width - resizeHandleBottomRight.Width / 2);
                 Canvas.SetTop(resizeHandleBottomRight, top + height - resizeHandleBottomRight.Height / 2);
+
             }
         }
-
-        // Position Handle 위치
-
-        /*
-        private void PositionResizeHandles(Rectangle rectangle)
-        {
-
-            if (rectangle == null)
-            {
-                throw new ArgumentNullException(nameof(rectangle), "사각형이 선택되지 않았습니다.");
-            }
-
-            // 각 핸들이 null인지 확인
-            if (resizeHandleTopLeft == null || resizeHandleTopRight == null || resizeHandleBottomLeft == null || resizeHandleBottomRight == null)
-            {
-                throw new InvalidOperationException("Resize 핸들이 초기화되지 않았습니다.");
-            }
-
-            // 사각형의 위치에 맞춰 핸들을 배치
-            double left = Canvas.GetLeft(rectangle);
-            double top = Canvas.GetTop(rectangle);
-            double width = rectangle.Width;
-            double height = rectangle.Height;
-
-            Canvas.SetLeft(resizeHandleTopLeft, left - resizeHandleTopLeft.Width / 2);
-            Canvas.SetTop(resizeHandleTopLeft, top - resizeHandleTopLeft.Height / 2);
-
-            Canvas.SetLeft(resizeHandleTopRight, left + width - resizeHandleTopRight.Width / 2);
-            Canvas.SetTop(resizeHandleTopRight, top - resizeHandleTopRight.Height / 2);
-
-            Canvas.SetLeft(resizeHandleBottomLeft, left - resizeHandleBottomLeft.Width / 2);
-            Canvas.SetTop(resizeHandleBottomLeft, top + height - resizeHandleBottomLeft.Height / 2);
-
-            Canvas.SetLeft(resizeHandleBottomRight, left + width - resizeHandleBottomRight.Width / 2);
-            Canvas.SetTop(resizeHandleBottomRight, top + height - resizeHandleBottomRight.Height / 2);
-        }
-        */
 
 
         private void ResizeRectangle(Rectangle rectangle, ResizeDirection direction, Point currentPoint)
