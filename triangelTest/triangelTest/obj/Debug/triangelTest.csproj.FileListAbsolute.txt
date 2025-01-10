@@ -1,0 +1,15 @@
+C:\Git\CSharp\KH_project\triangelTest\triangelTest\bin\Debug\triangelTest.exe.config
+C:\Git\CSharp\KH_project\triangelTest\triangelTest\bin\Debug\triangelTest.exe
+C:\Git\CSharp\KH_project\triangelTest\triangelTest\bin\Debug\triangelTest.pdb
+C:\Git\CSharp\KH_project\triangelTest\triangelTest\obj\Debug\triangelTest.csproj.AssemblyReference.cache
+C:\Git\CSharp\KH_project\triangelTest\triangelTest\obj\Debug\MainWindow.g.cs
+C:\Git\CSharp\KH_project\triangelTest\triangelTest\obj\Debug\App.g.cs
+C:\Git\CSharp\KH_project\triangelTest\triangelTest\obj\Debug\triangelTest_MarkupCompile.cache
+C:\Git\CSharp\KH_project\triangelTest\triangelTest\obj\Debug\triangelTest_MarkupCompile.lref
+C:\Git\CSharp\KH_project\triangelTest\triangelTest\obj\Debug\MainWindow.baml
+C:\Git\CSharp\KH_project\triangelTest\triangelTest\obj\Debug\triangelTest.g.resources
+C:\Git\CSharp\KH_project\triangelTest\triangelTest\obj\Debug\triangelTest.Properties.Resources.resources
+C:\Git\CSharp\KH_project\triangelTest\triangelTest\obj\Debug\triangelTest.csproj.GenerateResource.cache
+C:\Git\CSharp\KH_project\triangelTest\triangelTest\obj\Debug\triangelTest.csproj.CoreCompileInputs.cache
+C:\Git\CSharp\KH_project\triangelTest\triangelTest\obj\Debug\triangelTest.exe
+C:\Git\CSharp\KH_project\triangelTest\triangelTest\obj\Debug\triangelTest.pdb

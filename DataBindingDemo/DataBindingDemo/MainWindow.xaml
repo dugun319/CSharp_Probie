@@ -1,0 +1,14 @@
+﻿<Window x:Class="DataBindingDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataBindingDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid   d:DataContext="{d:DesignInstance Type=local:Customer}"
+            Name="_grid">
+        <TextBox HorizontalAlignment="Left" Height="78" Margin="82,64,0,0" TextWrapping="Wrap" Text="{Binding FirstName}" VerticalAlignment="Top" Width="318" FontWeight="Bold" FontSize="24"/>
+        <TextBox HorizontalAlignment="Left" Margin="82,173,0,0" TextWrapping="Wrap" Text="{Binding LastName}" VerticalAlignment="Top" Width="318" Height="68" FontWeight="Bold" FontSize="36"/>
+    </Grid>
+</Window>

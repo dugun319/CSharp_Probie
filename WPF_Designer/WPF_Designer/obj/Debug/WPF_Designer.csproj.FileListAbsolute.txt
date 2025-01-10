@@ -1,0 +1,15 @@
+C:\Git\CSharp\KH_project\WPF_Designer\WPF_Designer\bin\Debug\WPF_Designer.exe.config
+C:\Git\CSharp\KH_project\WPF_Designer\WPF_Designer\bin\Debug\WPF_Designer.exe
+C:\Git\CSharp\KH_project\WPF_Designer\WPF_Designer\bin\Debug\WPF_Designer.pdb
+C:\Git\CSharp\KH_project\WPF_Designer\WPF_Designer\obj\Debug\WPF_Designer.csproj.AssemblyReference.cache
+C:\Git\CSharp\KH_project\WPF_Designer\WPF_Designer\obj\Debug\MainWindow.g.cs
+C:\Git\CSharp\KH_project\WPF_Designer\WPF_Designer\obj\Debug\App.g.cs
+C:\Git\CSharp\KH_project\WPF_Designer\WPF_Designer\obj\Debug\WPF_Designer_MarkupCompile.cache
+C:\Git\CSharp\KH_project\WPF_Designer\WPF_Designer\obj\Debug\WPF_Designer_MarkupCompile.lref
+C:\Git\CSharp\KH_project\WPF_Designer\WPF_Designer\obj\Debug\MainWindow.baml
+C:\Git\CSharp\KH_project\WPF_Designer\WPF_Designer\obj\Debug\WPF_Designer.g.resources
+C:\Git\CSharp\KH_project\WPF_Designer\WPF_Designer\obj\Debug\WPF_Designer.Properties.Resources.resources
+C:\Git\CSharp\KH_project\WPF_Designer\WPF_Designer\obj\Debug\WPF_Designer.csproj.GenerateResource.cache
+C:\Git\CSharp\KH_project\WPF_Designer\WPF_Designer\obj\Debug\WPF_Designer.csproj.CoreCompileInputs.cache
+C:\Git\CSharp\KH_project\WPF_Designer\WPF_Designer\obj\Debug\WPF_Designer.exe
+C:\Git\CSharp\KH_project\WPF_Designer\WPF_Designer\obj\Debug\WPF_Designer.pdb

@@ -1,0 +1,16 @@
+C:\Git\CSharp\KH_project\AnimatedButton\AnimatedButton\bin\Debug\AnimatedButton.exe.config
+C:\Git\CSharp\KH_project\AnimatedButton\AnimatedButton\bin\Debug\AnimatedButton.exe
+C:\Git\CSharp\KH_project\AnimatedButton\AnimatedButton\bin\Debug\AnimatedButton.pdb
+C:\Git\CSharp\KH_project\AnimatedButton\AnimatedButton\obj\Debug\AnimatedButton.csproj.AssemblyReference.cache
+C:\Git\CSharp\KH_project\AnimatedButton\AnimatedButton\obj\Debug\MainWindow.g.cs
+C:\Git\CSharp\KH_project\AnimatedButton\AnimatedButton\obj\Debug\App.g.cs
+C:\Git\CSharp\KH_project\AnimatedButton\AnimatedButton\obj\Debug\AnimatedButton_MarkupCompile.cache
+C:\Git\CSharp\KH_project\AnimatedButton\AnimatedButton\obj\Debug\AnimatedButton_MarkupCompile.lref
+C:\Git\CSharp\KH_project\AnimatedButton\AnimatedButton\obj\Debug\App.baml
+C:\Git\CSharp\KH_project\AnimatedButton\AnimatedButton\obj\Debug\MainWindow.baml
+C:\Git\CSharp\KH_project\AnimatedButton\AnimatedButton\obj\Debug\AnimatedButton.g.resources
+C:\Git\CSharp\KH_project\AnimatedButton\AnimatedButton\obj\Debug\AnimatedButton.Properties.Resources.resources
+C:\Git\CSharp\KH_project\AnimatedButton\AnimatedButton\obj\Debug\AnimatedButton.csproj.GenerateResource.cache
+C:\Git\CSharp\KH_project\AnimatedButton\AnimatedButton\obj\Debug\AnimatedButton.csproj.CoreCompileInputs.cache
+C:\Git\CSharp\KH_project\AnimatedButton\AnimatedButton\obj\Debug\AnimatedButton.exe
+C:\Git\CSharp\KH_project\AnimatedButton\AnimatedButton\obj\Debug\AnimatedButton.pdb

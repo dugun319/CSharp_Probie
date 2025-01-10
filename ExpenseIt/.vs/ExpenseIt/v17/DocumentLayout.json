@@ -1,0 +1,160 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Git\\CSharp\\KH_project\\ExpenseIt\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{197077A0-6A57-486B-9D94-A4FBBD184D76}|ExpenseIt\\ExpenseIt.csproj|C:\\Git\\CSharp\\KH_project\\ExpenseIt\\ExpenseIt\\App.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{197077A0-6A57-486B-9D94-A4FBBD184D76}|ExpenseIt\\ExpenseIt.csproj|solutionrelative:ExpenseIt\\App.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{197077A0-6A57-486B-9D94-A4FBBD184D76}|ExpenseIt\\ExpenseIt.csproj|C:\\Git\\CSharp\\KH_project\\ExpenseIt\\ExpenseIt\\ExpenseItHome.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{197077A0-6A57-486B-9D94-A4FBBD184D76}|ExpenseIt\\ExpenseIt.csproj|solutionrelative:ExpenseIt\\ExpenseItHome.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{197077A0-6A57-486B-9D94-A4FBBD184D76}|ExpenseIt\\ExpenseIt.csproj|C:\\Git\\CSharp\\KH_project\\ExpenseIt\\expenseit\\expenseitreportpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{197077A0-6A57-486B-9D94-A4FBBD184D76}|ExpenseIt\\ExpenseIt.csproj|solutionrelative:expenseit\\expenseitreportpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{197077A0-6A57-486B-9D94-A4FBBD184D76}|ExpenseIt\\ExpenseIt.csproj|c:\\git\\csharp\\kh_project\\expenseit\\expenseit\\expenseithome.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{197077A0-6A57-486B-9D94-A4FBBD184D76}|ExpenseIt\\ExpenseIt.csproj|solutionrelative:expenseit\\expenseithome.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{197077A0-6A57-486B-9D94-A4FBBD184D76}|ExpenseIt\\ExpenseIt.csproj|C:\\Git\\CSharp\\KH_project\\ExpenseIt\\ExpenseIt\\ExpenseItReportPage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{197077A0-6A57-486B-9D94-A4FBBD184D76}|ExpenseIt\\ExpenseIt.csproj|solutionrelative:ExpenseIt\\ExpenseItReportPage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{197077A0-6A57-486B-9D94-A4FBBD184D76}|ExpenseIt\\ExpenseIt.csproj|C:\\Git\\CSharp\\KH_project\\ExpenseIt\\expenseit\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{197077A0-6A57-486B-9D94-A4FBBD184D76}|ExpenseIt\\ExpenseIt.csproj|solutionrelative:expenseit\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{197077A0-6A57-486B-9D94-A4FBBD184D76}|ExpenseIt\\ExpenseIt.csproj|C:\\Git\\CSharp\\KH_project\\ExpenseIt\\ExpenseIt\\App.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{197077A0-6A57-486B-9D94-A4FBBD184D76}|ExpenseIt\\ExpenseIt.csproj|solutionrelative:ExpenseIt\\App.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{197077A0-6A57-486B-9D94-A4FBBD184D76}|ExpenseIt\\ExpenseIt.csproj|C:\\Git\\CSharp\\KH_project\\ExpenseIt\\ExpenseIt\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{197077A0-6A57-486B-9D94-A4FBBD184D76}|ExpenseIt\\ExpenseIt.csproj|solutionrelative:ExpenseIt\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 644,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ExpenseItReportPage.xaml.cs",
+              "DocumentMoniker": "C:\\Git\\CSharp\\KH_project\\ExpenseIt\\ExpenseIt\\ExpenseItReportPage.xaml.cs",
+              "RelativeDocumentMoniker": "ExpenseIt\\ExpenseItReportPage.xaml.cs",
+              "ToolTip": "C:\\Git\\CSharp\\KH_project\\ExpenseIt\\ExpenseIt\\ExpenseItReportPage.xaml.cs",
+              "RelativeToolTip": "ExpenseIt\\ExpenseItReportPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T05:27:25.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ExpenseItHome.xaml.cs",
+              "DocumentMoniker": "C:\\Git\\CSharp\\KH_project\\ExpenseIt\\ExpenseIt\\ExpenseItHome.xaml.cs",
+              "RelativeDocumentMoniker": "ExpenseIt\\ExpenseItHome.xaml.cs",
+              "ToolTip": "C:\\Git\\CSharp\\KH_project\\ExpenseIt\\ExpenseIt\\ExpenseItHome.xaml.cs",
+              "RelativeToolTip": "ExpenseIt\\ExpenseItHome.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T05:27:07.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ExpenseItReportPage.xaml",
+              "DocumentMoniker": "C:\\Git\\CSharp\\KH_project\\ExpenseIt\\ExpenseIt\\ExpenseItReportPage.xaml",
+              "RelativeDocumentMoniker": "ExpenseIt\\ExpenseItReportPage.xaml",
+              "ToolTip": "C:\\Git\\CSharp\\KH_project\\ExpenseIt\\ExpenseIt\\ExpenseItReportPage.xaml",
+              "RelativeToolTip": "ExpenseIt\\ExpenseItReportPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-07T05:26:00.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ExpenseItHome.xaml",
+              "DocumentMoniker": "C:\\Git\\CSharp\\KH_project\\ExpenseIt\\ExpenseIt\\ExpenseItHome.xaml",
+              "RelativeDocumentMoniker": "ExpenseIt\\ExpenseItHome.xaml",
+              "ToolTip": "C:\\Git\\CSharp\\KH_project\\ExpenseIt\\ExpenseIt\\ExpenseItHome.xaml",
+              "RelativeToolTip": "ExpenseIt\\ExpenseItHome.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-07T05:22:36.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Git\\CSharp\\KH_project\\ExpenseIt\\ExpenseIt\\App.xaml",
+              "RelativeDocumentMoniker": "ExpenseIt\\App.xaml",
+              "ToolTip": "C:\\Git\\CSharp\\KH_project\\ExpenseIt\\ExpenseIt\\App.xaml",
+              "RelativeToolTip": "ExpenseIt\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-07T05:14:40.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Git\\CSharp\\KH_project\\ExpenseIt\\ExpenseIt\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "ExpenseIt\\MainWindow.xaml",
+              "ToolTip": "C:\\Git\\CSharp\\KH_project\\ExpenseIt\\ExpenseIt\\MainWindow.xaml",
+              "RelativeToolTip": "ExpenseIt\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-07T05:14:27.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Git\\CSharp\\KH_project\\ExpenseIt\\ExpenseIt\\App.xaml.cs",
+              "RelativeDocumentMoniker": "ExpenseIt\\App.xaml.cs",
+              "ToolTip": "C:\\Git\\CSharp\\KH_project\\ExpenseIt\\ExpenseIt\\App.xaml.cs",
+              "RelativeToolTip": "ExpenseIt\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T05:14:56.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Git\\CSharp\\KH_project\\ExpenseIt\\ExpenseIt\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ExpenseIt\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Git\\CSharp\\KH_project\\ExpenseIt\\ExpenseIt\\MainWindow.xaml.cs",
+              "RelativeToolTip": "ExpenseIt\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T05:14:27.24Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

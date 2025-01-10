@@ -1,0 +1,15 @@
+C:\Git\CSharp\KH_project\ShapeExc\ShapeExc\obj\Debug\ShapeExc.csproj.AssemblyReference.cache
+C:\Git\CSharp\KH_project\ShapeExc\ShapeExc\obj\Debug\MainWindow.g.cs
+C:\Git\CSharp\KH_project\ShapeExc\ShapeExc\obj\Debug\App.g.cs
+C:\Git\CSharp\KH_project\ShapeExc\ShapeExc\obj\Debug\ShapeExc_MarkupCompile.cache
+C:\Git\CSharp\KH_project\ShapeExc\ShapeExc\obj\Debug\ShapeExc_MarkupCompile.lref
+C:\Git\CSharp\KH_project\ShapeExc\ShapeExc\bin\Debug\ShapeExc.exe.config
+C:\Git\CSharp\KH_project\ShapeExc\ShapeExc\bin\Debug\ShapeExc.exe
+C:\Git\CSharp\KH_project\ShapeExc\ShapeExc\bin\Debug\ShapeExc.pdb
+C:\Git\CSharp\KH_project\ShapeExc\ShapeExc\obj\Debug\MainWindow.baml
+C:\Git\CSharp\KH_project\ShapeExc\ShapeExc\obj\Debug\ShapeExc.g.resources
+C:\Git\CSharp\KH_project\ShapeExc\ShapeExc\obj\Debug\ShapeExc.Properties.Resources.resources
+C:\Git\CSharp\KH_project\ShapeExc\ShapeExc\obj\Debug\ShapeExc.csproj.GenerateResource.cache
+C:\Git\CSharp\KH_project\ShapeExc\ShapeExc\obj\Debug\ShapeExc.csproj.CoreCompileInputs.cache
+C:\Git\CSharp\KH_project\ShapeExc\ShapeExc\obj\Debug\ShapeExc.exe
+C:\Git\CSharp\KH_project\ShapeExc\ShapeExc\obj\Debug\ShapeExc.pdb

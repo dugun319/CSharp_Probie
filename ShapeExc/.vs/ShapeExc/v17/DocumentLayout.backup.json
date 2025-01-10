@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Git\\CSharp\\KH_project\\ShapeExc\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CE0882-3627-40FC-9DF4-F45BC1DE6B05}|ShapeExc\\ShapeExc.csproj|c:\\git\\csharp\\kh_project\\shapeexc\\shapeexc\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E8CE0882-3627-40FC-9DF4-F45BC1DE6B05}|ShapeExc\\ShapeExc.csproj|solutionrelative:shapeexc\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CE0882-3627-40FC-9DF4-F45BC1DE6B05}|ShapeExc\\ShapeExc.csproj|c:\\git\\csharp\\kh_project\\shapeexc\\shapeexc\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CE0882-3627-40FC-9DF4-F45BC1DE6B05}|ShapeExc\\ShapeExc.csproj|solutionrelative:shapeexc\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 644,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Git\\CSharp\\KH_project\\ShapeExc\\ShapeExc\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "ShapeExc\\MainWindow.xaml",
+              "ToolTip": "C:\\Git\\CSharp\\KH_project\\ShapeExc\\ShapeExc\\MainWindow.xaml*",
+              "RelativeToolTip": "ShapeExc\\MainWindow.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-08T04:41:09.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Git\\CSharp\\KH_project\\ShapeExc\\ShapeExc\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ShapeExc\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Git\\CSharp\\KH_project\\ShapeExc\\ShapeExc\\MainWindow.xaml.cs",
+              "RelativeToolTip": "ShapeExc\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAADwvxgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T04:41:09.269Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

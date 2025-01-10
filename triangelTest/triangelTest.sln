@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35431.28
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "triangelTest", "triangelTest\triangelTest.csproj", "{7DD1E871-2DEA-4A9F-829E-AA7147C0580B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DD1E871-2DEA-4A9F-829E-AA7147C0580B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DD1E871-2DEA-4A9F-829E-AA7147C0580B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DD1E871-2DEA-4A9F-829E-AA7147C0580B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DD1E871-2DEA-4A9F-829E-AA7147C0580B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {758E3DFC-2D57-48ED-95BF-B38F11138CBB}
+	EndGlobalSection
+EndGlobal

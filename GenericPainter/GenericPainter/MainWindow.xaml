@@ -1,0 +1,266 @@
+﻿<Window x:Class="GenericPainter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GenericPainter"
+        mc:Ignorable="d"
+        Title="KH_Painter" Height="600" Width="1000"
+        MouseLeftButtonDown="canvas_MouseLeftButtonDown"
+        MouseLeftButtonUp="canvas_MouseLeftButtonUp"
+        MouseMove="canvas_MouseMove"
+        MouseRightButtonDown="canvas_MouseRightButtonDown"
+        MouseRightButtonUp="canvas_MouseRightButtonUp"
+        >
+
+    <Grid>
+        <Border x:Name="canvasBorder"
+                BorderBrush="Pink"
+                BorderThickness="5"
+                CornerRadius="10"
+                Margin="10,50,10,10">
+            <Canvas x:Name="canvas"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Height="500"
+                    Width="955"
+                    Margin="7,7,0,0"
+                    MouseLeftButtonDown="blankCanvas_click">
+            </Canvas>
+        </Border>
+
+
+        <!--   Button for Object          -->
+
+        <Button x:Name="button_line"
+                Content="Line"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="40"
+                Height="35"
+                Margin="15,7,0,0"
+                Click="button_line_click" FontFamily="Arial" />
+
+        <Button x:Name="button_freeLine"
+                Content="Free"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="40"
+                Height="35"
+                Margin="65,7,0,0"
+                Click="button_freeLine_click" FontFamily="Arial" />
+
+        <Button x:Name="button_circle"
+                Content="Circle"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="40"
+                Height="35"
+                Margin="115,7,0,0"
+                Click="button_circle_click" FontFamily="Arial" />
+
+        <Button x:Name="button_rectangle"
+                Content="Rect"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="40"
+                Height="35"
+                Margin="165,7,0,0"
+                Click="button_rectangle_click" FontFamily="Arial" />
+
+        <Button x:Name="button_eraser"
+                Content="Eraser"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="40"
+                Height="35"
+                Margin="215,7,0,0"
+                Click="button_eraser_click" FontFamily="Arial" />
+
+
+
+        <!--   Button for Size and Color       -->
+
+        <ComboBox   x:Name="comboBox"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Width="50"
+                    Margin="274,14,0,0"
+                    SelectionChanged="comboBox_SelectionChanged" FontFamily="Arial">
+            <ComboBoxItem>10</ComboBoxItem>
+            <ComboBoxItem>12</ComboBoxItem>
+            <ComboBoxItem>14</ComboBoxItem>
+            <ComboBoxItem>16</ComboBoxItem>
+            <ComboBoxItem IsSelected="True">18</ComboBoxItem>
+            <ComboBoxItem>20</ComboBoxItem>
+            <ComboBoxItem>22</ComboBoxItem>
+            <ComboBoxItem>24</ComboBoxItem>
+            <ComboBoxItem>26</ComboBoxItem>
+            <ComboBoxItem>28</ComboBoxItem>
+            <ComboBoxItem>30</ComboBoxItem>
+            <ComboBoxItem>32</ComboBoxItem>
+            <ComboBoxItem>34</ComboBoxItem>
+            <ComboBoxItem>36</ComboBoxItem>
+        </ComboBox>
+
+        <Button x:Name="color_black"
+                Content=""
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="25"
+                Height="25"
+                Margin="335,12,0,0"
+                Background="Black"
+                Click="color_black_click" />
+
+        <Button x:Name="color_white"
+                Content=""
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="25"
+                Height="25"
+                Margin="365,12,0,0"
+                Background="White"
+                Click="color_white_click" />
+
+        <Button x:Name="color_red"
+                Content=""
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="25"
+                Height="25"
+                Margin="395,12,0,0"
+                Background="Red"
+                Click="color_red_click" />
+
+        <Button x:Name="color_orange"
+                Content=""
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="25"
+                Height="25"
+                Margin="425,12,0,0"
+                Background="Orange"
+                Click="color_orange_click" />
+
+        <Button x:Name="color_yellow"
+                Content=""
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="25"
+                Height="25"
+                Margin="455,12,0,0"
+                Background="Yellow"
+                Click="color_yellow_click" />
+
+        <Button x:Name="color_green"
+                Content=""
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="25"
+                Height="25"
+                Margin="485,12,0,0"
+                Background="Green"
+                Click="color_green_click" />
+
+        <Button x:Name="color_blue"
+                Content=""
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="25"
+                Height="25"
+                Margin="515,12,0,0"
+                Background="Blue"
+                Click="color_blue_click" />
+
+        <Button x:Name="color_navy"
+                Content=""
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="25"
+                Height="25"
+                Margin="545,12,0,0"
+                Background="Navy"
+                Click="color_navy_click" />
+
+        <Button x:Name="color_purple"
+                Content=""
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="25"
+                Height="25"
+                Margin="575,12,0,0"
+                Background="Purple"
+                Click="color_purple_click" />
+
+        <Button x:Name="color_lightGray"
+                Content=""
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="25"
+                Height="25"
+                Margin="605,12,0,0"
+                Background="LightGray"
+                Click="color_lightGray_click" />
+
+        <Button x:Name="color_gray"
+                Content=""
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="25"
+                Height="25"
+                Margin="635,12,0,0"
+                Background="Gray"
+                Click="color_gray_click" />
+
+        <Button x:Name="color_darkGray"
+                Content=""
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="25"
+                Height="25"
+                Margin="665,12,0,0"
+                Background="DarkGray"
+                Click="color_darkGray_click" />
+
+
+        <!--   Button for Json Value        -->
+
+        <Button x:Name="button_clear"
+                Content="Clear"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="40"
+                Height="35"
+                Margin="710,7,0,0"
+                Click="button_clear_click" FontFamily="Arial Black" />
+
+        <Button x:Name="button_free"
+                Content="Free"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="40"
+                Height="35"
+                Margin="755,7,0,0"
+                Click="button_free_click" FontFamily="Arial Black" />
+
+        <Button x:Name="button_jsonSave"
+                Content="jsonSave"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="80"
+                Height="35"
+                Margin="810,7,0,0"
+                Click="button_jsonSave_click" FontFamily="Arial Black" />
+
+        <Button x:Name="button_jsonLoad"
+                Content="jsonLoad"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="80"
+                Height="35"
+                Margin="900,7,0,0"
+                Click="button_jsonLoad_click" FontFamily="Arial Black" />
+
+    </Grid>
+</Window>

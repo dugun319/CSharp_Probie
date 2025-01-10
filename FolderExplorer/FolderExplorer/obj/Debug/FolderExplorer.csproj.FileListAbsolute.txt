@@ -1,0 +1,15 @@
+C:\Git\CSharp\KH_project\FolderExplorer\FolderExplorer\bin\Debug\FolderExplorer.exe.config
+C:\Git\CSharp\KH_project\FolderExplorer\FolderExplorer\bin\Debug\FolderExplorer.exe
+C:\Git\CSharp\KH_project\FolderExplorer\FolderExplorer\bin\Debug\FolderExplorer.pdb
+C:\Git\CSharp\KH_project\FolderExplorer\FolderExplorer\obj\Debug\FolderExplorer.csproj.AssemblyReference.cache
+C:\Git\CSharp\KH_project\FolderExplorer\FolderExplorer\obj\Debug\MainWindow.g.cs
+C:\Git\CSharp\KH_project\FolderExplorer\FolderExplorer\obj\Debug\App.g.cs
+C:\Git\CSharp\KH_project\FolderExplorer\FolderExplorer\obj\Debug\FolderExplorer_MarkupCompile.cache
+C:\Git\CSharp\KH_project\FolderExplorer\FolderExplorer\obj\Debug\FolderExplorer_MarkupCompile.lref
+C:\Git\CSharp\KH_project\FolderExplorer\FolderExplorer\obj\Debug\MainWindow.baml
+C:\Git\CSharp\KH_project\FolderExplorer\FolderExplorer\obj\Debug\FolderExplorer.g.resources
+C:\Git\CSharp\KH_project\FolderExplorer\FolderExplorer\obj\Debug\FolderExplorer.Properties.Resources.resources
+C:\Git\CSharp\KH_project\FolderExplorer\FolderExplorer\obj\Debug\FolderExplorer.csproj.GenerateResource.cache
+C:\Git\CSharp\KH_project\FolderExplorer\FolderExplorer\obj\Debug\FolderExplorer.csproj.CoreCompileInputs.cache
+C:\Git\CSharp\KH_project\FolderExplorer\FolderExplorer\obj\Debug\FolderExplorer.exe
+C:\Git\CSharp\KH_project\FolderExplorer\FolderExplorer\obj\Debug\FolderExplorer.pdb
