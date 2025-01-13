@@ -1,0 +1,123 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Git\\CSharp\\KH_project\\MaterialDesignInXamlToolkitExample\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{45B296FF-CA5F-4935-AA8B-4EABCD048D86}|MaterialDesignInXamlToolkitExample\\MaterialDesignInXamlToolkitExample.csproj|C:\\Git\\CSharp\\KH_project\\MaterialDesignInXamlToolkitExample\\materialdesigninxamltoolkitexample\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45B296FF-CA5F-4935-AA8B-4EABCD048D86}|MaterialDesignInXamlToolkitExample\\MaterialDesignInXamlToolkitExample.csproj|solutionrelative:materialdesigninxamltoolkitexample\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45B296FF-CA5F-4935-AA8B-4EABCD048D86}|MaterialDesignInXamlToolkitExample\\MaterialDesignInXamlToolkitExample.csproj|C:\\Git\\CSharp\\KH_project\\MaterialDesignInXamlToolkitExample\\materialdesigninxamltoolkitexample\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{45B296FF-CA5F-4935-AA8B-4EABCD048D86}|MaterialDesignInXamlToolkitExample\\MaterialDesignInXamlToolkitExample.csproj|solutionrelative:materialdesigninxamltoolkitexample\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45B296FF-CA5F-4935-AA8B-4EABCD048D86}|MaterialDesignInXamlToolkitExample\\MaterialDesignInXamlToolkitExample.csproj|c:\\git\\csharp\\kh_project\\materialdesigninxamltoolkitexample\\materialdesigninxamltoolkitexample\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{45B296FF-CA5F-4935-AA8B-4EABCD048D86}|MaterialDesignInXamlToolkitExample\\MaterialDesignInXamlToolkitExample.csproj|solutionrelative:materialdesigninxamltoolkitexample\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 285,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:140:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Git\\CSharp\\KH_project\\MaterialDesignInXamlToolkitExample\\MaterialDesignInXamlToolkitExample\\App.xaml",
+              "RelativeDocumentMoniker": "MaterialDesignInXamlToolkitExample\\App.xaml",
+              "ToolTip": "C:\\Git\\CSharp\\KH_project\\MaterialDesignInXamlToolkitExample\\MaterialDesignInXamlToolkitExample\\App.xaml",
+              "RelativeToolTip": "MaterialDesignInXamlToolkitExample\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-10T08:41:30.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Git\\CSharp\\KH_project\\MaterialDesignInXamlToolkitExample\\MaterialDesignInXamlToolkitExample\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MaterialDesignInXamlToolkitExample\\MainWindow.xaml",
+              "ToolTip": "C:\\Git\\CSharp\\KH_project\\MaterialDesignInXamlToolkitExample\\MaterialDesignInXamlToolkitExample\\MainWindow.xaml",
+              "RelativeToolTip": "MaterialDesignInXamlToolkitExample\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-10T08:41:16.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Git\\CSharp\\KH_project\\MaterialDesignInXamlToolkitExample\\MaterialDesignInXamlToolkitExample\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MaterialDesignInXamlToolkitExample\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Git\\CSharp\\KH_project\\MaterialDesignInXamlToolkitExample\\MaterialDesignInXamlToolkitExample\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MaterialDesignInXamlToolkitExample\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T08:41:16.393Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 644,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0504ff91-9d61-11d0-a794-00a0c9110051}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
