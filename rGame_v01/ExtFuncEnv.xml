@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExternalFunctionEnvironmentList xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <List>
+    <ExternalFunctionEnvironment>
+      <RegNumber>SAP</RegNumber>
+      <ServiceName>SAP</ServiceName>
+      <Address>sap.smartmaker.com:8877</Address>
+      <SServiceType>2</SServiceType>
+      <STransmitService>0</STransmitService>
+      <SRequestType>0</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>4</SSendStructType>
+      <SReceiveStructType>4</SReceiveStructType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>false</OpenAPI>
+      <Headers />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>약국정보서비스</RegNumber>
+      <ServiceName>약국정보서비스</ServiceName>
+      <Address>apis.data.go.kr</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>0</STransmitService>
+      <SRequestType>1</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>1</SSendStructType>
+      <SReceiveStructType>1</SReceiveStructType>
+      <UserAgent />
+      <ContentType>application/xml</ContentType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers />
+      <Authorization />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>우편번호</RegNumber>
+      <ServiceName>우편번호</ServiceName>
+      <Address>openapi.epost.go.kr</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>0</STransmitService>
+      <SRequestType>1</SRequestType>
+      <EncodingString>utf-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>1</SSendStructType>
+      <SReceiveStructType>1</SReceiveStructType>
+      <UserAgent />
+      <ContentType>application/xml</ContentType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers />
+      <Authorization />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>bitcoin</RegNumber>
+      <ServiceName>bitcoin</ServiceName>
+      <Address>pro-api.coinmarketcap.com</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>0</STransmitService>
+      <SRequestType>1</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>0</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <UserAgent />
+      <ContentType />
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers />
+      <Authorization />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>alimtalktoken</RegNumber>
+      <ServiceName>alimtalktoken</ServiceName>
+      <Address>kakaoapi.aligo.in</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>1</STransmitService>
+      <SRequestType>0</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>2</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>alimtalk</RegNumber>
+      <ServiceName>alimtalk</ServiceName>
+      <Address>kakaoapi.aligo.in</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>1</STransmitService>
+      <SRequestType>0</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>2</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <UserAgent />
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers />
+      <Authorization />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>navienserver</RegNumber>
+      <ServiceName>navienserver</ServiceName>
+      <Address>krtc-api.naviensmartcontrol.com</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>1</STransmitService>
+      <SRequestType>0</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>0</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <UserAgent />
+      <ContentType />
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers />
+      <Authorization />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>navienserverdata</RegNumber>
+      <ServiceName>navienserverdata</ServiceName>
+      <Address>krtc-api.naviensmartcontrol.com</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>1</STransmitService>
+      <SRequestType>0</SRequestType>
+      <EncodingString>utf-8</EncodingString>
+      <DecodingString />
+      <SSendStructType>0</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <UserAgent />
+      <ContentType />
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers>
+        <HeaderItem>
+          <Name>Authorization</Name>
+          <Value>#accessToken</Value>
+        </HeaderItem>
+      </Headers>
+      <Authorization />
+      <EncodingHTML>true</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>Billkey</RegNumber>
+      <ServiceName>PG정기결제테스트</ServiceName>
+      <Address>218.144.146.123</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>0</STransmitService>
+      <SRequestType>1</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>2</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <UserAgent />
+      <ContentType />
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>false</OpenAPI>
+      <Headers />
+      <Authorization />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>이미지업로드</RegNumber>
+      <ServiceName>이미지업로드</ServiceName>
+      <Address>lguplus.smartmaker.com</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>1</STransmitService>
+      <SRequestType>0</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>5</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>navienservertoken</RegNumber>
+      <ServiceName>navienservertoken</ServiceName>
+      <Address>krtc-api.naviensmartcontrol.com</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>1</STransmitService>
+      <SRequestType>0</SRequestType>
+      <EncodingString>utf-8</EncodingString>
+      <DecodingString />
+      <SSendStructType>0</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <UserAgent />
+      <ContentType />
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers />
+      <Authorization />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>upload_image</RegNumber>
+      <ServiceName />
+      <Address />
+      <SServiceType>0</SServiceType>
+      <STransmitService>0</STransmitService>
+      <SRequestType>1</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>2</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>navienremovegroup</RegNumber>
+      <ServiceName>navienremovegroup</ServiceName>
+      <Address>krtc-api.naviensmartcontrol.com</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>1</STransmitService>
+      <SRequestType>0</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>0</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <UserAgent />
+      <ContentType />
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers>
+        <HeaderItem>
+          <Name>Authorization</Name>
+          <Value>#accessToken</Value>
+        </HeaderItem>
+      </Headers>
+      <Authorization />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>navienservergroupinfo</RegNumber>
+      <ServiceName>navienservergroupinfo</ServiceName>
+      <Address>krtc-api.naviensmartcontrol.com</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>1</STransmitService>
+      <SRequestType>0</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>0</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <UserAgent />
+      <ContentType />
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers>
+        <HeaderItem>
+          <Name>Authorization</Name>
+          <Value>#accessToken</Value>
+        </HeaderItem>
+      </Headers>
+      <Authorization />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>navienservergroup</RegNumber>
+      <ServiceName>navienservergroup</ServiceName>
+      <Address>krtc-api.naviensmartcontrol.com</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>1</STransmitService>
+      <SRequestType>0</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>0</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <UserAgent />
+      <ContentType />
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers>
+        <HeaderItem>
+          <Name>Authorization</Name>
+          <Value>#accessToken</Value>
+        </HeaderItem>
+      </Headers>
+      <Authorization />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>googlemap</RegNumber>
+      <ServiceName>googlemap</ServiceName>
+      <Address>maps.googleapis.com</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>0</STransmitService>
+      <SRequestType>1</SRequestType>
+      <EncodingString>utf-8</EncodingString>
+      <DecodingString />
+      <SSendStructType>1</SSendStructType>
+      <SReceiveStructType>1</SReceiveStructType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>filedown</RegNumber>
+      <ServiceName>filedown</ServiceName>
+      <Address>store.smartmaker.com</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>1</STransmitService>
+      <SRequestType>1</SRequestType>
+      <EncodingString>utf-8</EncodingString>
+      <DecodingString>utf-8</DecodingString>
+      <SSendStructType>2</SSendStructType>
+      <SReceiveStructType>5</SReceiveStructType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>false</OpenAPI>
+      <Headers />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>SendMessage</RegNumber>
+      <ServiceName>SendMessage</ServiceName>
+      <Address>license.smartmaker.com</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>1</STransmitService>
+      <SRequestType>1</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>2</SSendStructType>
+      <SReceiveStructType>1</SReceiveStructType>
+      <UserAgent />
+      <ContentType />
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>false</OpenAPI>
+      <Headers />
+      <Authorization />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>FILE_UPLOAD</RegNumber>
+      <ServiceName />
+      <Address />
+      <SServiceType>0</SServiceType>
+      <STransmitService>0</STransmitService>
+      <SRequestType>1</SRequestType>
+      <EncodingString>utf-8</EncodingString>
+      <DecodingString>utf-8</DecodingString>
+      <SSendStructType>2</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>false</OpenAPI>
+      <Headers />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>SelectLicense</RegNumber>
+      <ServiceName>SelectLicense</ServiceName>
+      <Address>license.smartmaker.com</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>1</STransmitService>
+      <SRequestType>0</SRequestType>
+      <EncodingString>utf-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>2</SSendStructType>
+      <SReceiveStructType>1</SReceiveStructType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>false</OpenAPI>
+      <Headers />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>License</RegNumber>
+      <ServiceName>License</ServiceName>
+      <Address>license.smartmaker.com</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>1</STransmitService>
+      <SRequestType>0</SRequestType>
+      <EncodingString>utf-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>2</SSendStructType>
+      <SReceiveStructType>1</SReceiveStructType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>false</OpenAPI>
+      <Headers />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>avip</RegNumber>
+      <ServiceName />
+      <Address />
+      <SServiceType>0</SServiceType>
+      <STransmitService>0</STransmitService>
+      <SRequestType>1</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>2</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>유튜브검색</RegNumber>
+      <ServiceName />
+      <Address />
+      <SServiceType>0</SServiceType>
+      <STransmitService>0</STransmitService>
+      <SRequestType>1</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>2</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>previewTest</RegNumber>
+      <ServiceName>previewTest</ServiceName>
+      <Address>my.api.mockaroo.com</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>1</STransmitService>
+      <SRequestType>0</SRequestType>
+      <EncodingString>utf-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>0</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <UserAgent />
+      <ContentType>application/json</ContentType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers>
+        <HeaderItem>
+          <Name>X-API-Key</Name>
+          <Value>416f4720</Value>
+        </HeaderItem>
+      </Headers>
+      <Authorization />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>previewTestGET</RegNumber>
+      <ServiceName>previewTestGET</ServiceName>
+      <Address>my.api.mockaroo.com</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>1</STransmitService>
+      <SRequestType>1</SRequestType>
+      <EncodingString>utf-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>0</SSendStructType>
+      <SReceiveStructType>2</SReceiveStructType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>urlToFile</RegNumber>
+      <ServiceName>urlToFile</ServiceName>
+      <Address>220.64.91.228:80</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>0</STransmitService>
+      <SRequestType>0</SRequestType>
+      <EncodingString>utf-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>0</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <UserAgent />
+      <ContentType>application/json</ContentType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers />
+      <Authorization />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>Gemini</RegNumber>
+      <ServiceName>geminiTest</ServiceName>
+      <Address>generativelanguage.googleapis.com</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>0</STransmitService>
+      <SRequestType>1</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>2</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <UserAgent />
+      <ContentType />
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers>
+        <HeaderItem>
+          <Name>x-goog-api-key</Name>
+          <Value>AIzaSyA7qIz9fraeo4GxmmHyDLejq3d-wjDB-wk</Value>
+        </HeaderItem>
+      </Headers>
+      <Authorization />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>openai</RegNumber>
+      <ServiceName />
+      <Address />
+      <SServiceType>0</SServiceType>
+      <STransmitService>0</STransmitService>
+      <SRequestType>1</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>2</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>POST</RegNumber>
+      <ServiceName>POST</ServiceName>
+      <Address>openapi.epost.go.kr</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>0</STransmitService>
+      <SRequestType>1</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>1</SSendStructType>
+      <SReceiveStructType>1</SReceiveStructType>
+      <UserAgent />
+      <ContentType>application/xml</ContentType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers />
+      <Authorization />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>test22</RegNumber>
+      <ServiceName>test</ServiceName>
+      <Address>211.117.82.100:7522</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>0</STransmitService>
+      <SRequestType>0</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>0</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <UserAgent />
+      <ContentType>application/json</ContentType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers>
+        <HeaderItem>
+          <Name>Authorization</Name>
+          <Value>Basic a29uZV9hdmlwOjA2OWNhNzg4ZjYzMjVkNGI3NDJlNzM0M2NkM2UxMDJj</Value>
+        </HeaderItem>
+      </Headers>
+      <Authorization />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>cnai_avip</RegNumber>
+      <ServiceName>cnai_avip</ServiceName>
+      <Address>192.168.1.22:3000</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>0</STransmitService>
+      <SRequestType>0</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>0</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <UserAgent />
+      <ContentType>application/json</ContentType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>false</OpenAPI>
+      <Headers />
+      <Authorization />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>cnai_avip2</RegNumber>
+      <ServiceName>cnai_avip2</ServiceName>
+      <Address>192.168.1.21:7522</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>0</STransmitService>
+      <SRequestType>0</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>0</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <UserAgent />
+      <ContentType>application/json</ContentType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>false</OpenAPI>
+      <Headers />
+      <Authorization />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>avip_test</RegNumber>
+      <ServiceName>avip_test</ServiceName>
+      <Address>08f8e7e2-8a63-4fe8-83e5-001ca04b0b03.mock.pstmn.io</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>1</STransmitService>
+      <SRequestType>1</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>0</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>getVoiceList</RegNumber>
+      <ServiceName>getVoiceList</ServiceName>
+      <Address>220.64.91.228:80</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>0</STransmitService>
+      <SRequestType>1</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>0</SSendStructType>
+      <SReceiveStructType>2</SReceiveStructType>
+      <UserAgent />
+      <ContentType />
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers />
+      <Authorization />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>getVoiceSample</RegNumber>
+      <ServiceName>getVoiceSample</ServiceName>
+      <Address>220.64.91.228:80</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>0</STransmitService>
+      <SRequestType>1</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>0</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>postVoicePreview</RegNumber>
+      <ServiceName>postVoicePreview</ServiceName>
+      <Address>220.64.91.228:80</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>0</STransmitService>
+      <SRequestType>0</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>0</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <UserAgent />
+      <ContentType>application/json</ContentType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers />
+      <Authorization />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>sendTmpPw</RegNumber>
+      <ServiceName>sendTmpPw</ServiceName>
+      <Address>220.64.91.228:80</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>0</STransmitService>
+      <SRequestType>0</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>0</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <UserAgent />
+      <ContentType>application/json; charset=utf-8</ContentType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers>
+        <HeaderItem>
+          <Name>Authoriztion</Name>
+          <Value>a29uZV9hdmlwOjA2OWNhNzg4ZjYzMjVkNGI3NDJlNzM0M2NkM2UxMDJj</Value>
+        </HeaderItem>
+      </Headers>
+      <Authorization />
+      <EncodingHTML>true</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>동네예보</RegNumber>
+      <ServiceName>동네예보</ServiceName>
+      <Address>apis.data.go.kr</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>0</STransmitService>
+      <SRequestType>1</SRequestType>
+      <EncodingString>utf-8</EncodingString>
+      <DecodingString />
+      <SSendStructType>1</SSendStructType>
+      <SReceiveStructType>1</SReceiveStructType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>RSS테스트</RegNumber>
+      <ServiceName>RSS테스트</ServiceName>
+      <Address>www.mk.co.kr</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>1</STransmitService>
+      <SRequestType>1</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>2</SSendStructType>
+      <SReceiveStructType>1</SReceiveStructType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>timezone</RegNumber>
+      <ServiceName>timezone</ServiceName>
+      <Address>worldtimeapi.org</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>1</STransmitService>
+      <SRequestType>1</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>2</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+    <ExternalFunctionEnvironment>
+      <RegNumber>환율계산</RegNumber>
+      <ServiceName>환율계산</ServiceName>
+      <Address>www.koreaexim.go.kr</Address>
+      <SServiceType>0</SServiceType>
+      <STransmitService>1</STransmitService>
+      <SRequestType>1</SRequestType>
+      <EncodingString>UTF-8</EncodingString>
+      <DecodingString>UTF-8</DecodingString>
+      <SSendStructType>2</SSendStructType>
+      <SReceiveStructType>0</SReceiveStructType>
+      <URLEncoding>false</URLEncoding>
+      <OpenAPI>true</OpenAPI>
+      <Headers />
+      <EncodingHTML>false</EncodingHTML>
+    </ExternalFunctionEnvironment>
+  </List>
+</ExternalFunctionEnvironmentList>
