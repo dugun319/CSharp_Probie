@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Git\\CSharp\\KH_project\\DataBindingExample\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DD6C786D-9573-4C62-AA18-9DA145D8D720}|DataBindingExample\\DataBindingExample.csproj|c:\\git\\csharp\\kh_project\\databindingexample\\databindingexample\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DD6C786D-9573-4C62-AA18-9DA145D8D720}|DataBindingExample\\DataBindingExample.csproj|solutionrelative:databindingexample\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD6C786D-9573-4C62-AA18-9DA145D8D720}|DataBindingExample\\DataBindingExample.csproj|c:\\git\\csharp\\kh_project\\databindingexample\\databindingexample\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD6C786D-9573-4C62-AA18-9DA145D8D720}|DataBindingExample\\DataBindingExample.csproj|solutionrelative:databindingexample\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD6C786D-9573-4C62-AA18-9DA145D8D720}|DataBindingExample\\DataBindingExample.csproj|c:\\git\\csharp\\kh_project\\databindingexample\\databindingexample\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD6C786D-9573-4C62-AA18-9DA145D8D720}|DataBindingExample\\DataBindingExample.csproj|solutionrelative:databindingexample\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 285,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Git\\CSharp\\KH_project\\DataBindingExample\\DataBindingExample\\User.cs",
+              "RelativeDocumentMoniker": "DataBindingExample\\User.cs",
+              "ToolTip": "C:\\Git\\CSharp\\KH_project\\DataBindingExample\\DataBindingExample\\User.cs",
+              "RelativeToolTip": "DataBindingExample\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T00:46:48.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Git\\CSharp\\KH_project\\DataBindingExample\\DataBindingExample\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "DataBindingExample\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Git\\CSharp\\KH_project\\DataBindingExample\\DataBindingExample\\MainWindow.xaml.cs",
+              "RelativeToolTip": "DataBindingExample\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T00:43:49.049Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "1f7e224d-fe98-464a-ba1e-702bfe888e9e",
+        "Display": 1,
+        "X": 270,
+        "Y": 210,
+        "Width": 985,
+        "Height": 982,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Git\\CSharp\\KH_project\\DataBindingExample\\DataBindingExample\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "DataBindingExample\\MainWindow.xaml",
+              "ToolTip": "C:\\Git\\CSharp\\KH_project\\DataBindingExample\\DataBindingExample\\MainWindow.xaml",
+              "RelativeToolTip": "DataBindingExample\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-20T00:43:49.264Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

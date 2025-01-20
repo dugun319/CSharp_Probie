@@ -1,0 +1,15 @@
+C:\Git\CSharp\KH_project\DataBindingExample\DataBindingExample\obj\Debug\DataBindingExample.csproj.AssemblyReference.cache
+C:\Git\CSharp\KH_project\DataBindingExample\DataBindingExample\obj\Debug\MainWindow.g.cs
+C:\Git\CSharp\KH_project\DataBindingExample\DataBindingExample\obj\Debug\App.g.cs
+C:\Git\CSharp\KH_project\DataBindingExample\DataBindingExample\obj\Debug\DataBindingExample_MarkupCompile.cache
+C:\Git\CSharp\KH_project\DataBindingExample\DataBindingExample\obj\Debug\DataBindingExample_MarkupCompile.lref
+C:\Git\CSharp\KH_project\DataBindingExample\DataBindingExample\bin\Debug\DataBindingExample.exe.config
+C:\Git\CSharp\KH_project\DataBindingExample\DataBindingExample\bin\Debug\DataBindingExample.exe
+C:\Git\CSharp\KH_project\DataBindingExample\DataBindingExample\bin\Debug\DataBindingExample.pdb
+C:\Git\CSharp\KH_project\DataBindingExample\DataBindingExample\obj\Debug\MainWindow.baml
+C:\Git\CSharp\KH_project\DataBindingExample\DataBindingExample\obj\Debug\DataBindingExample.g.resources
+C:\Git\CSharp\KH_project\DataBindingExample\DataBindingExample\obj\Debug\DataBindingExample.Properties.Resources.resources
+C:\Git\CSharp\KH_project\DataBindingExample\DataBindingExample\obj\Debug\DataBindingExample.csproj.GenerateResource.cache
+C:\Git\CSharp\KH_project\DataBindingExample\DataBindingExample\obj\Debug\DataBindingExample.csproj.CoreCompileInputs.cache
+C:\Git\CSharp\KH_project\DataBindingExample\DataBindingExample\obj\Debug\DataBindingExample.exe
+C:\Git\CSharp\KH_project\DataBindingExample\DataBindingExample\obj\Debug\DataBindingExample.pdb
