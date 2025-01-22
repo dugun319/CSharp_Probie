@@ -1,0 +1,18 @@
+﻿<local:WebDHtmlEditAtomBase x:Uid="local:DHtmlEditAtomBase_1" x:Class="Softpower.SmartMaker.TopWebAtom.WebDHtmlEditofAtom"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Softpower.SmartMaker.TopWebAtom"
+			 xmlns:Chrome="clr-namespace:Softpower.SmartMaker.TopWebAtom.Component.HtmlEditor"
+             mc:Ignorable="d" 
+             >
+	<Grid >
+        <Border x:Name="RootBorder" Background="Transparent" BorderBrush="Black" BorderThickness="1">
+			<Chrome:HtmlEditorManagerControl x:Name="HtmlEditorManager" />
+		</Border>
+
+		<Image x:Name="AtomImage" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center" Source="pack://application:,,,/BOS08;component/AtomImages/DhtmlAtom.png"/>
+
+	</Grid>
+</local:WebDHtmlEditAtomBase>
