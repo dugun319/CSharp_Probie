@@ -1,0 +1,235 @@
+public override void OnUpdateAtt ()
+{
+	SmartCheckBoxExAttPage SmartAttPage = this.CurrentAttPage as SmartCheckBoxExAttPage;
+	if (null != SmartAttPage)
+	{
+		Atom pAtom = AttAtom;
+
+		int nCheckType = -1;
+
+		if (this.AttAtom is CheckAtom)
+		{
+			nCheckType = 0;
+		}
+		else if (this.AttAtom is ToggleSwitchAtom)
+		{
+			nCheckType = 1;
+		}
+		else if (this.AttAtom is RatingBarAtom)
+		{
+			nCheckType = 2;
+		}
+
+		if (nCheckType != SmartAttPage.CheckType)
+		{
+			Information info = pAtom.Information;
+			//info.SetAttribCheckAtom (ref pAtom, SmartAttPage.CheckType);
+			info.SetAttribToAtom (ref pAtom, SmartAttPage.CheckType);
+		}
+
+		if (pAtom is CheckAtom)
+		{
+			CheckAttrib pAttrib = this.AttAtom.GetAttrib () as CheckAttrib;
+			if (null != pAttrib)
+			{
+				CheckAttrib pOrgAttrib = new CheckAttrib ();
+				CloneObject.CloneProperty (pAttrib, pOrgAttrib);
+
+				pAttrib.DispType = SmartAttPage.CheckBoxPage.DispType;
+				pAttrib.RightToLeft = SmartAttPage.CheckBoxPage.RightToLeft;
+				pAttrib.EffectStyle = SmartAttPage.CheckBoxPage.EffectStyle;
+
+				pAttrib.IsAtomHidden = SmartAttPage.CheckBoxPage.WndVisible;
+				pAttrib.IsDisabled = SmartAttPage.CheckBoxPage.WndDisabled;
+				pAttrib.IsVanish = SmartAttPage.CheckBoxPage.Vanish;
+
+				bool IsCheckUnLoaded = false;
+				bool IsUnCheckUnLoaded = false;
+
+				if (false == string.IsNullOrEmpty (SmartAttPage.CheckBoxPage.CheckImagePath))
+				{
+					string strTempCheckImagePath = PQAppBase.KissGetFullPath (SmartAttPage.CheckBoxPage.CheckImagePath);
+
+					if (false == string.IsNullOrEmpty (strTempCheckImagePath) && false == File.Exists (strTempCheckImagePath))
+					{
+						IsCheckUnLoaded = true;
+					}
+					else
+					{
+						CObjectImage checkImage = new CObjectImage ();
+						checkImage.ImagePath = SmartAttPage.CheckBoxPage.CheckImagePath;
+						pAttrib.CheckImageKey = pAttrib.GetKeyFromGDIObj (checkImage, pAttrib.CheckImageKey);
+					}
+				}
+				else
+				{
+					pAttrib.CheckImageKey = -1;
+					SmartAttPage.CheckBoxPage.CheckImagePath = "";
+				}
+
+				if (false == string.IsNullOrEmpty (SmartAttPage.CheckBoxPage.UnCheckImagePath))
+				{
+					string strTempUnCheckImagePath = PQAppBase.KissGetFullPath (SmartAttPage.CheckBoxPage.UnCheckImagePath);
+
+					if (false == string.IsNullOrEmpty (strTempUnCheckImagePath) && false == File.Exists (strTempUnCheckImagePath))
+					{
+						IsUnCheckUnLoaded = true;
+					}
+					else
+					{
+						CObjectImage unCheckImage = new CObjectImage ();
+						unCheckImage.ImagePath = SmartAttPage.CheckBoxPage.UnCheckImagePath;
+						pAttrib.UncheckImageKey = pAttrib.GetKeyFromGDIObj (unCheckImage, pAttrib.UncheckImageKey);
+					}
+				}
+				else
+				{
+					pAttrib.UncheckImageKey = -1;
+					SmartAttPage.CheckBoxPage.UnCheckImagePath = "";
+				}
+
+				if (IsCheckUnLoaded || IsUnCheckUnLoaded)
+				{
+					if (MessageBoxResult.Yes == _Message80.Show (LC.GS ("TopSmartAtomManager_SmartActionAttCore_1808_1"), "", MessageBoxButton.YesNo, MessageBoxImage.Question))
+					{
+						if (IsCheckUnLoaded)
+						{
+							pAttrib.CheckImageKey = -1;
+							SmartAttPage.CheckBoxPage.CheckImagePath = "";
+						}
+
+						if (IsUnCheckUnLoaded)
+						{
+							pAttrib.UncheckImageKey = -1;
+							SmartAttPage.CheckBoxPage.UnCheckImagePath = "";
+						}
+					}
+				}
+
+				if (false == CloneObject.IsEqualProperty (pOrgAttrib, pAttrib))
+				{
+					pAttrib.ChangeAttribCommand (pOrgAttrib);
+				}
+
+				if (pAtom != AttAtom)
+					pAtom.GetOfAtom ().InitAtomBaseWhenAtomCoreHasChanged (pAtom);
+
+				pAtom.CompletePropertyChanged ();
+			}
+		}
+		else if (pAtom is ToggleSwitchAtom)
+		{
+			ToggleSwitchAttrib pAttrib = this.AttAtom.GetAttrib () as ToggleSwitchAttrib;
+			if (null != pAttrib)
+			{
+				ToggleSwitchAttrib pOrgAttrib = new ToggleSwitchAttrib ();
+				CloneObject.CloneProperty (pAttrib, pOrgAttrib);
+
+				pAttrib.OnValue = SmartAttPage.ToggleSwitchPage.OnValue;
+				pAttrib.OffValue = SmartAttPage.ToggleSwitchPage.OffValue;
+
+				pAttrib.IsAtomHidden = SmartAttPage.ToggleSwitchPage.WndVisible;
+				pAttrib.IsDisabled = SmartAttPage.ToggleSwitchPage.WndDisabled;
+				pAttrib.IsVanish = SmartAttPage.ToggleSwitchPage.Vanish;
+
+				if (false == CloneObject.IsEqualProperty (pOrgAttrib, pAttrib))
+				{
+					pAttrib.ChangeAttribCommand (pOrgAttrib);
+				}
+
+				if (pAtom != AttAtom)
+					pAtom.GetOfAtom ().InitAtomBaseWhenAtomCoreHasChanged (pAtom);
+
+				pAtom.CompletePropertyChanged ();
+			}
+		}
+		else if (pAtom is RatingBarAtom)
+		{
+			RatingBarAttrib pAttrib = this.AttAtom.GetAttrib () as RatingBarAttrib;
+			if (null != pAttrib)
+			{
+				RatingBarAttrib pOrgAttrib = new RatingBarAttrib ();
+				CloneObject.CloneProperty (pAttrib, pOrgAttrib);
+
+				pAttrib.NumStars = SmartAttPage.RatingBarPage.NumStars;
+
+				pAttrib.IsAtomHidden = SmartAttPage.RatingBarPage.WndVisible;
+				pAttrib.IsDisabled = SmartAttPage.RatingBarPage.WndDisabled;
+				pAttrib.IsVanish = SmartAttPage.RatingBarPage.Vanish;
+
+				bool IsCheckUnLoaded = false;
+				bool IsUnCheckUnLoaded = false;
+
+				if (false == string.IsNullOrEmpty (SmartAttPage.RatingBarPage.CheckImagePath))
+				{
+					string strTempCheckImagePath = PQAppBase.KissGetFullPath (SmartAttPage.RatingBarPage.CheckImagePath);
+
+					if (false == string.IsNullOrEmpty (strTempCheckImagePath) && false == File.Exists (strTempCheckImagePath))
+					{
+						IsCheckUnLoaded = true;
+					}
+					else
+					{
+						CObjectImage checkImage = new CObjectImage ();
+						checkImage.ImagePath = SmartAttPage.RatingBarPage.CheckImagePath;
+						pAttrib.CheckImageKey = pAttrib.GetKeyFromGDIObj (checkImage, pAttrib.CheckImageKey);
+					}
+				}
+				else
+				{
+					pAttrib.CheckImageKey = -1;
+					SmartAttPage.RatingBarPage.CheckImagePath = "";
+				}
+
+				if (false == string.IsNullOrEmpty (SmartAttPage.RatingBarPage.UnCheckImagePath))
+				{
+					string strTempUnCheckImagePath = PQAppBase.KissGetFullPath (SmartAttPage.RatingBarPage.UnCheckImagePath);
+
+					if (false == string.IsNullOrEmpty (strTempUnCheckImagePath) && false == File.Exists (strTempUnCheckImagePath))
+					{
+						IsUnCheckUnLoaded = true;
+					}
+					else
+					{
+						CObjectImage unCheckImage = new CObjectImage ();
+						unCheckImage.ImagePath = SmartAttPage.RatingBarPage.UnCheckImagePath;
+						pAttrib.UncheckImageKey = pAttrib.GetKeyFromGDIObj (unCheckImage, pAttrib.UncheckImageKey);
+					}
+				}
+				else
+				{
+					pAttrib.UncheckImageKey = -1;
+					SmartAttPage.RatingBarPage.UnCheckImagePath = "";
+				}
+
+				if (IsCheckUnLoaded || IsUnCheckUnLoaded)
+				{
+					if (MessageBoxResult.Yes == _Message80.Show (LC.GS ("TopSmartAtomManager_SmartActionAttCore_1808_1"), "", MessageBoxButton.YesNo, MessageBoxImage.Question))
+					{
+						if (IsCheckUnLoaded)
+						{
+							pAttrib.CheckImageKey = -1;
+							SmartAttPage.RatingBarPage.UnCheckImagePath = "";
+						}
+
+						if (IsUnCheckUnLoaded)
+						{
+							pAttrib.UncheckImageKey = -1;
+							SmartAttPage.RatingBarPage.UnCheckImagePath = "";
+						}
+					}
+				}
+
+				if (false == CloneObject.IsEqualProperty (pOrgAttrib, pAttrib))
+				{
+					pAttrib.ChangeAttribCommand (pOrgAttrib);
+				}
+
+				if (pAtom != AttAtom)
+					pAtom.GetOfAtom ().InitAtomBaseWhenAtomCoreHasChanged (pAtom);
+
+				pAtom.CompletePropertyChanged ();
+			}
+		}
+	}
+}
