@@ -56,10 +56,6 @@ namespace Softpower.SmartMaker.TopAtom.Ebook.Components
 
 		private DispatcherTimer m_SlideTimer = null;
 
-        // 20250203 KH 북모델 이미지표시란 아톰  - 좌우슬라이딩 효과 보완 - 마지막일때  회전될수 있도록 논리보완
-        // 20250203 KH Variant For SlideImage AutoPlay
-        private int totalCount;
-
 		bool m_bIsRunMode = false;
 		private Atom m_pOwnerAtom;
 
@@ -1132,14 +1128,11 @@ namespace Softpower.SmartMaker.TopAtom.Ebook.Components
 
 		#endregion Slide Button
 
-		public void SetImageInfo(Dictionary<int, EBookImageInfo> imageInfoDic, Dictionary<int, BitmapImage> bitImageDic, int nGifPlayType, int nGifPlayCount)
+		public void SetImageInfo (Dictionary<int, EBookImageInfo> imageInfoDic, Dictionary<int, BitmapImage> bitImageDic, int nGifPlayType, int nGifPlayCount)
 		{
 			ImageInfoDic = imageInfoDic;
 			ImageDic = bitImageDic;
 			ImageUnit1.ClearImageInfo ();
-
-            // 20250203 KH 북모델 이미지표시란 아톰  - 좌우슬라이딩 효과 보완 - 마지막일때  회전될수 있도록 논리보완
-            totalCount = imageInfoDic.Count;
 
             if (0 == imageInfoDic.Count || 0 >= ButtonContainer.Children.Count || null == ButtonContainer.Children[0])
 			{
@@ -1284,12 +1277,10 @@ namespace Softpower.SmartMaker.TopAtom.Ebook.Components
 			{
 				int nCurrentSlideIndex = ImageUnit2.ImageIndex;
 
-				// 20250203 KH 
-				// m_SiideImageAnimation.TabInclease = (nCurrentSlideIndex < nSlideIndex);
+                // 20250203 KH 
+                // m_SiideImageAnimation.TabInclease = (nCurrentSlideIndex < nSlideIndex);
 
-				Debug.WriteLine($"SlideCount -> {SlideCount}");
-
-                if (m_bAutoPlay == true && nCurrentSlideIndex == totalCount)
+                if (m_bAutoPlay == true && nCurrentSlideIndex == SlideCount)
 				{
 					m_SiideImageAnimation.TabInclease = true;
                 }
