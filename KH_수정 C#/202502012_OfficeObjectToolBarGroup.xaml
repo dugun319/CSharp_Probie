@@ -1,0 +1,52 @@
+﻿<Views:ToolBarGroupBase x:Uid="Views:ToolBarGroupBase_1" x:Class="Softpower.SmartMaker.TopBuild.Views.ToolBar.ToolBarGroup.OfficeObjectToolBarGroup"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:Views="clr-namespace:Softpower.SmartMaker.TopBuild.Views.ToolBar.ToolBarGroup"
+             xmlns:viewModels="clr-namespace:Softpower.SmartMaker.TopBuild.ViewModels.ToolBar.ToolBarGroup"
+             xmlns:ComboBoxes="clr-namespace:Softpower.SmartMaker.TopControl.Components.ComboBox;assembly=BOS04"
+            xmlns:ToolBarComboboxes="clr-namespace:Softpower.SmartMaker.TopBuild.Views.ToolBar.ToolBarComboBoxes"
+             mc:Ignorable="d" 
+             Height="62" d:DesignWidth="120"   Margin="0,-1.5,0,0">
+    <Views:ToolBarGroupBase.DataContext>
+        <viewModels:OfficeObjectToolBarGroupViewModel x:Uid="viewModels:OfficeObjectToolBarGroupViewModel_1"/>
+    </Views:ToolBarGroupBase.DataContext>
+    <Grid x:Uid="RootGrid" x:Name="RootGrid" DataContext="{Binding OfficeObjectModel, Mode=TwoWay}">
+        <Grid.RowDefinitions>
+            <RowDefinition  x:Uid="RowDefinition_1" Height="8"/>
+            <RowDefinition x:Uid="RowDefinition_2"/>
+            <RowDefinition  x:Uid="RowDefinition_3" Height="4"/>
+            <RowDefinition x:Uid="RowDefinition_4"/>
+            <RowDefinition  x:Uid="RowDefinition_5" Height="8"/>
+        </Grid.RowDefinitions>
+        <StackPanel x:Uid="FirstRowStackPanel" x:Name="FirstRowStackPanel" Orientation="Horizontal" Grid.Row="1">
+            <ComboBoxes:FlexibleComboBox x:Uid="AlignmentComboBox" x:Name="AlignmentComboBox" ToolTip="정렬" IsEnabled="False" ComboBoxStyle="0" Width="37" Margin="5,0,0,0" OnNotifySelectionChangedEvent="AlignmentComboBox_OnNotifySelectionChangedEvent"/>
+            <ComboBoxes:FlexibleComboBox x:Uid="ArrangementComboBox" x:Name="ArrangementComboBox" IsEnabled="False" ToolTip="크기맞춤" ComboBoxStyle="0" Width="37" Margin="2,0,0,0" OnNotifySelectionChangedEvent="ArrangementComboBox_OnNotifySelectionChangedEvent"/>
+            <ComboBoxes:FlexibleComboBox x:Uid="ZIndexComboBox" x:Name="ZIndexComboBox" ToolTip="순서" IsEnabled="False" ComboBoxStyle="0" Width="37" Margin="2,0,2,0" OnNotifySelectionChangedEvent="ZIndexComboBox_OnNotifySelectionChangedEvent"/>
+
+            <Border x:Uid="QuickStyleBorder" x:Name="QuickStyleBorder" IsEnabled="False" Width="20" Height="20" Margin="2,0,10,0" MouseEnter="QuickStyleBorder_MouseEnter" MouseLeave="QuickStyleBorder_MouseLeave" MouseLeftButtonDown="QuickStyleBorder_MouseLeftButtonDown" ToolTip="빠른 스타일"  BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Center">
+                <Grid x:Name="QuickGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock x:Uid="QuickFontTextBlock" x:Name="QuickFontTextBlock" Text="가" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="10" />
+					<Rectangle x:Name="QuickBackground" Fill="Black" Grid.Row="1" HorizontalAlignment="Center" Margin="0,0,0,1" Width="14" Height="4"/>
+                </Grid>
+            </Border>
+
+        </StackPanel>
+        <StackPanel x:Uid="SecondRowStackPanel" x:Name="SecondRowStackPanel" Orientation="Horizontal" Grid.Row="3" Margin="0,-2.5,0,0">
+            <ToolBarComboboxes:BackgroundColorComboBox x:Uid="BackgroundColorComboBox" x:Name="BackgroundColorComboBox" IsEnabled="False" Width="37" Margin="5,0,0,0" />
+            <ToolBarComboboxes:LineColorComboBox x:Uid="LineColorComboBox" x:Name="LineColorComboBox" IsEnabled="False" ComboBoxStyle="0" Width="37" Margin="2,0,0,0"/>
+            <Border x:Uid="ShowHideBorder" x:Name="ShowHideBorder" IsEnabled="False" Width="22" Margin="7,0,0,0" MouseEnter="ShowHideBorder_MouseEnter" MouseLeave="ShowHideBorder_MouseLeave" MouseLeftButtonDown="ShowHideBorder_MouseLeftButtonDown" ToolTip="화면감춤">
+                <Image x:Uid="ShowHideImage" x:Name="ShowHideImage" Source="{Binding ShowHideUri}" Stretch="None"/>
+            </Border>
+            
+          <Border Width="16" Margin="7,0,0,0"/>
+              
+        </StackPanel>
+    </Grid>
+</Views:ToolBarGroupBase>
