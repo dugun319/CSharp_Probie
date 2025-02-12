@@ -1,0 +1,33 @@
+{
+	"nodes":[
+		{"id":"8b32a8a4ae25f32e","type":"group","x":-442,"y":715,"width":795,"height":100,"label":"사용자 PC"},
+		{"id":"379ff41296a1f612","type":"text","text":"View","x":-442,"y":-274,"width":250,"height":60},
+		{"id":"61bd5a9049e9f26b","type":"text","text":"ViewModel","x":-442,"y":64,"width":250,"height":60},
+		{"id":"b60b7e6a9e835d4b","type":"text","text":"Model","x":-19,"y":64,"width":250,"height":60},
+		{"id":"e5941f7e63d0a6e2","type":"text","text":"푸시서버","x":-397,"y":390,"width":250,"height":60},
+		{"id":"348fa47ac7a82131","type":"text","text":"마케팅 / cs팀 푸시 발송 요청","x":-397,"y":228,"width":322,"height":60},
+		{"id":"d464499585dd1146","type":"text","text":" SmartPushPopup (UI)","x":83,"y":735,"width":250,"height":60},
+		{"id":"5c5a602740d2e979","type":"text","text":"SmartPushService (서비스)","x":-422,"y":735,"width":292,"height":60},
+		{"id":"c2ceb6886576c2cc","type":"text","text":"SmartMaker","x":-462,"y":1635,"width":250,"height":60},
+		{"id":"e15cfccc6c6cecc4","type":"text","text":"Apserver","x":-51,"y":1634,"width":250,"height":60},
+		{"id":"10246e1a86be131a","type":"text","text":"db","x":-51,"y":1861,"width":250,"height":60},
+		{"id":"efe7fcb46931d93f","x":-687,"y":2154,"width":250,"height":60,"type":"text","text":"192.168.0.99"},
+		{"id":"2e19d6167bf82f70","x":-400,"y":2154,"width":250,"height":60,"type":"text","text":""},
+		{"id":"68b577a081cbf662","x":-128,"y":2154,"width":250,"height":60,"type":"text","text":""},
+		{"id":"8cb7d147fc56506b","x":-128,"y":2388,"width":250,"height":60,"type":"text","text":"공유기 (218.144.146.101)"},
+		{"id":"6b9f86aaa57496f9","x":-128,"y":2646,"width":250,"height":60,"type":"text","text":"외부"}
+	],
+	"edges":[
+		{"id":"a92567324aee55f7","fromNode":"61bd5a9049e9f26b","fromSide":"right","toNode":"b60b7e6a9e835d4b","toSide":"left","label":"참조"},
+		{"id":"2d05a14c0c3f6683","fromNode":"379ff41296a1f612","fromSide":"bottom","toNode":"61bd5a9049e9f26b","toSide":"top","fromEnd":"arrow","label":"바인딩"},
+		{"id":"bbc4996d167978aa","fromNode":"5c5a602740d2e979","fromSide":"top","toNode":"e5941f7e63d0a6e2","toSide":"bottom","label":"Stomp"},
+		{"id":"db0b15edcd8fc531","fromNode":"348fa47ac7a82131","fromSide":"bottom","toNode":"e5941f7e63d0a6e2","toSide":"top"},
+		{"id":"08fec25bbf4ef609","fromNode":"5c5a602740d2e979","fromSide":"right","toNode":"d464499585dd1146","toSide":"left"},
+		{"id":"367d12c86fd945c0","fromNode":"c2ceb6886576c2cc","fromSide":"right","toNode":"e15cfccc6c6cecc4","toSide":"left"},
+		{"id":"e99d25be1e0db33c","fromNode":"e15cfccc6c6cecc4","fromSide":"bottom","toNode":"10246e1a86be131a","toSide":"top","fromEnd":"arrow"},
+		{"id":"557beeb90f182247","fromNode":"efe7fcb46931d93f","fromSide":"bottom","toNode":"8cb7d147fc56506b","toSide":"top"},
+		{"id":"51c339c635a2ce9a","fromNode":"2e19d6167bf82f70","fromSide":"bottom","toNode":"8cb7d147fc56506b","toSide":"top"},
+		{"id":"1f6ed35d068db7a5","fromNode":"68b577a081cbf662","fromSide":"bottom","toNode":"8cb7d147fc56506b","toSide":"top"},
+		{"id":"7079714b61da1782","fromNode":"6b9f86aaa57496f9","fromSide":"top","toNode":"8cb7d147fc56506b","toSide":"bottom"}
+	]
+}

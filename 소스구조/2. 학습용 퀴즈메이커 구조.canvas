@@ -1,0 +1,17 @@
+{
+	"nodes":[
+		{"id":"5effc3b6f9c9800c","type":"text","text":"DMTFrame","x":-581,"y":-393,"width":250,"height":56},
+		{"id":"7364390f5266e0b2","type":"text","text":"m_BaseScreenView : QuizMakerScreenView","x":-397,"y":-246,"width":379,"height":60},
+		{"id":"1d2f5a2f97fd027e","type":"text","text":"DMTView","x":-119,"y":-35,"width":250,"height":60},
+		{"id":"fd4911767bfb59cc","type":"text","text":"DMTDoc","x":332,"y":-35,"width":250,"height":60},
+		{"id":"e0dcaeb9b805833a","type":"text","text":"EBookQuizViewofAtom","x":82,"y":149,"width":250,"height":60},
+		{"id":"b6d7d2ac55bec0e1","type":"text","text":"[컨텐츠 아톰]","x":276,"y":334,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"391f796d715515c3","fromNode":"5effc3b6f9c9800c","fromSide":"bottom","toNode":"7364390f5266e0b2","toSide":"left"},
+		{"id":"09d823ade330c831","fromNode":"7364390f5266e0b2","fromSide":"bottom","toNode":"1d2f5a2f97fd027e","toSide":"left"},
+		{"id":"ed33cb33cda0bd51","fromNode":"1d2f5a2f97fd027e","fromSide":"right","toNode":"fd4911767bfb59cc","toSide":"left","fromEnd":"arrow"},
+		{"id":"f38420d97f8b8440","fromNode":"1d2f5a2f97fd027e","fromSide":"bottom","toNode":"e0dcaeb9b805833a","toSide":"left"},
+		{"id":"f248218bbf822826","fromNode":"e0dcaeb9b805833a","fromSide":"bottom","toNode":"b6d7d2ac55bec0e1","toSide":"left"}
+	]
+}
