@@ -1,0 +1,75 @@
+﻿<AttBase:AttBasePage x:Class="Softpower.SmartMaker.TopSmartAtomEdit.AttPage.SmartNfcAdapterAttPage"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                     xmlns:local="clr-namespace:Softpower.SmartMaker.TopSmartAtomEdit.AttPage"
+                     xmlns:wtex="http://schemas.xceed.com/wpf/xaml/toolkit"
+                     xmlns:AttBase="clr-namespace:Softpower.SmartMaker.TopSmartAtomEdit.AttBase"
+                     xmlns:TextBlockControl="clr-namespace:Softpower.SmartMaker.TopControl.Components.TextBlockControl;assembly=BOS04"
+                     xmlns:CheckBoxControl="clr-namespace:Softpower.SmartMaker.TopControl.Components.CheckBox;assembly=BOS04"
+                     xmlns:NumericUpDown="clr-namespace:Softpower.SmartMaker.TopControl.Components.NumericUpDown;assembly=BOS04"
+                     xmlns:ComboBox="clr-namespace:Softpower.SmartMaker.TopControl.Components.ComboBox;assembly=BOS04"
+                     xmlns:TextBoxControl="clr-namespace:Softpower.SmartMaker.TopControl.Components.TextBoxControl;assembly=BOS04"
+                     xmlns:Button="clr-namespace:Softpower.SmartMaker.TopControl.Components.Button;assembly=BOS04"
+                     xmlns:PropervarManager="clr-namespace:Softpower.SmartMaker.TopSmartAtomEdit.SubControls.PropervarManager"
+                     mc:Ignorable="d" 
+                     d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Uid="RowDefinition_1" Height="30"/>
+            <RowDefinition x:Uid="RowDefinition_2"/>
+        </Grid.RowDefinitions>
+        <Grid x:Uid="TitleGrid" x:Name="TitleGrid"   >
+            <TextBlock x:Uid="TitleTextBlock" Name="TitleTextBlock" Text="음성인식(스타일속성) 설정"/>
+        </Grid>
+        <StackPanel Grid.Row="1" Background="White">
+            <GroupBox  x:Uid="GroupBox4" Name="GroupBox4" Margin="5,0,5,0" Height="Auto" BorderThickness="0,1,0,0">
+                <GroupBox.Header>
+                    <TextBlockControl:WPFTextBlock2 x:Uid="TextBlockControl:WPFTextBlock4_1" Text="입출력 데이터" />
+                </GroupBox.Header>
+                <Grid x:Uid="Grid_4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition x:Uid="ColumnDefinition_11" Width="80"></ColumnDefinition>
+                        <ColumnDefinition x:Uid="ColumnDefinition_12" Width="*"></ColumnDefinition>
+                        <ColumnDefinition x:Uid="ColumnDefinition_13" Width="*"></ColumnDefinition>
+                        <ColumnDefinition x:Uid="ColumnDefinition_14" Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition x:Uid="RowDefinition_8" Height="Auto"></RowDefinition>
+                        <RowDefinition x:Uid="RowDefinition_9" Height="Auto"></RowDefinition>
+                        <RowDefinition x:Uid="RowDefinition_9" Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <TextBlockControl:WPFTextBlock1 x:Uid="InputMethodLabel" Name="InputMethodLabel" Text="송신데이터" Margin="5" Grid.Row="0" Grid.Column="0" Visibility="Collapsed"/>
+                    <PropervarManager:PropervarTextBox x:Uid="InputMethodTextBox" x:Name="InputMethodTextBox"  Margin="5" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Visibility="Collapsed"/>
+
+                    <TextBlockControl:WPFTextBlock1 x:Uid="OutputMethodLabel" Name="OutputMethodLabel" Text="수신데이터" Margin="5" Grid.Row="1" Grid.Column="0" />
+                    <PropervarManager:PropervarTextBox x:Uid="OutputMethodTextBox" x:Name="OutputMethodTextBox"  Margin="5" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" />
+
+                    <TextBlockControl:WPFTextBlock1 x:Name="SerialNumberLabel" Text="시리얼번호" Margin="5" Grid.Row="2" Grid.Column="0" />
+                    <PropervarManager:PropervarTextBox x:Name="SerialNumberTextBox"  Margin="5" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" />
+
+                </Grid>
+            </GroupBox>
+
+            <!--보이기 속성 그룹 시작-->
+            <GroupBox  x:Uid="GroupBox1" Name="GroupBox1" Margin="5,0,5,0" Height="Auto" BorderThickness="0,1,0,0">
+                <GroupBox.Header>
+                    <TextBlockControl:WPFTextBlock2 x:Uid="TextBlockControl:WPFTextBlock1_1" Text="보이기 속성" />
+                </GroupBox.Header>
+                <Grid x:Uid="Grid_1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition x:Uid="ColumnDefinition_1" Width="*"/>
+                        <ColumnDefinition x:Uid="ColumnDefinition_2" Width="*"/>
+                        <ColumnDefinition x:Uid="ColumnDefinition_3" Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <!--보이기 속성 첫번째 로우-->
+                    <CheckBoxControl:WPFCheckBox1 x:Uid="VisibleCheckBox" Name="VisibleCheckBox"  Text="화면감춤" Margin="5" Grid.Column="0"/>
+                    <CheckBoxControl:WPFCheckBox1 x:Uid="VanishCheckBox" Name="VanishCheckBox"  Text="선택표시" Margin="5" Grid.Column="1"/>
+                    <CheckBoxControl:WPFCheckBox1 x:Name="DisabledCheckBox" Text="비활성화" Margin="5" Grid.Row="0" Grid.Column="2"/>
+                </Grid>
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+</AttBase:AttBasePage>
