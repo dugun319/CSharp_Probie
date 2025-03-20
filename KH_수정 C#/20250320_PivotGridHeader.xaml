@@ -1,0 +1,21 @@
+﻿<Border x:Uid="Border_1" x:Class="Softpower.SmartMaker.TopAtom.Components.TreeAtom.PivotGridHeader"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch" BorderBrush="#FF6593CF" BorderThickness="0,0,0,1">
+	<Border.Background>
+		<LinearGradientBrush x:Uid="LinearGradientBrush_1" EndPoint="0.5,1" StartPoint="0.5,0">
+			<GradientStop x:Uid="GradientStop_1" Color="#FFF5FAFF" Offset="0"/>
+			<GradientStop x:Uid="GradientStop_2" Color="#FFC5DEFF" Offset="1"/>
+			<GradientStop x:Uid="GradientStop_3" Color="#FFDFEBFF" Offset="0.5"/>
+		</LinearGradientBrush>
+    </Border.Background>
+    <ScrollViewer x:Name="HeaderScrollViewer" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Focusable="False">
+
+        <Grid x:Uid="RootGrid" x:Name="RootGrid"></Grid>
+    </ScrollViewer>
+</Border>
