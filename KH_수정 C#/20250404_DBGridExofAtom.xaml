@@ -1,0 +1,60 @@
+﻿<Views:DBGridExAtomBase x:Uid="Views:DBGridExAtomBase_1" x:Class="Softpower.SmartMaker.TopAtom.CDBGridExofAtom"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Views="clr-namespace:Softpower.SmartMaker.TopAtom"
+             xmlns:dt="clr-namespace:Softpower.SmartMaker.TopAtom.DataGrids"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+	<AdornerDecorator>
+		<Grid x:Uid="RootGrid" x:Name="RootGrid">
+			<!--<VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Uid="VisualStateGroup" x:Name="VisualStateGroup">
+                <VisualState x:Uid="BaseMode" x:Name="BaseMode"/>
+                <VisualState x:Uid="RunMode" x:Name="RunMode">
+                    <Storyboard x:Uid="Storyboard_1">
+                        <ObjectAnimationUsingKeyFrames x:Uid="ObjectAnimationUsingKeyFrames_1" Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="SurfaceCanvas">
+                            <DiscreteObjectKeyFrame x:Uid="DiscreteObjectKeyFrame_1" KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames x:Uid="ObjectAnimationUsingKeyFrames_2" Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="GridWindowEditor">
+                            <DiscreteObjectKeyFrame x:Uid="DiscreteObjectKeyFrame_2" KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames x:Uid="ObjectAnimationUsingKeyFrames_3" Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="ScrollViewerVertical">
+                            <DiscreteObjectKeyFrame x:Uid="DiscreteObjectKeyFrame_3" KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames x:Uid="ObjectAnimationUsingKeyFrames_4" Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="ScrollViewerHorizontal">
+                            <DiscreteObjectKeyFrame x:Uid="DiscreteObjectKeyFrame_4" KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>-->
+
+			<!--<TextBlock x:Name="HtmlTagHintTextblock" HorizontalAlignment="Center" TextWrapping="Wrap" Text="그리드 아톰입니다." VerticalAlignment="Center" FontSize="14.667" Foreground="{Binding Foreground, ElementName=DBGridExAtomBaseRoot}"/>-->
+			<!--<Image x:Name="AtomSurfaceImage" Stretch="None" VerticalAlignment="Top" HorizontalAlignment="Left" Visibility="Hidden" />-->
+
+			<!--<Image x:Uid="GridAtomImage" x:Name="GridAtomImage" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center" Source="pack://application:,,,/BOS08;component/AtomImages/DataGrid.png"/>-->
+
+			<Rectangle x:Uid="AtomBorderRectangle" x:Name="AtomBorderRectangle" Stroke="Black" Fill="White"/>
+
+			<dt:DataGridControl x:Name="DataGridControl" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+
+			<!--<ScrollViewer x:Uid="ScrollViewerVertical" x:Name="ScrollViewerVertical" HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Right"
+                      VerticalScrollBarVisibility="Auto" Grid.Row="3" 
+                      ScrollChanged="ScrollViewerVertical_ScrollChanged">
+            <TextBlock x:Uid="TextBlockScrollViewerVertical" x:Name="TextBlockScrollViewerVertical" VerticalAlignment="Top" HorizontalAlignment="Right" Width="0"  />
+        </ScrollViewer>-->
+
+
+
+			<!--<ScrollViewer x:Uid="ScrollViewerHorizontal" x:Name="ScrollViewerHorizontal" HorizontalScrollBarVisibility="Auto" VerticalAlignment="Bottom"
+                      VerticalScrollBarVisibility="Disabled" Grid.Row="3" 
+                      ScrollChanged="ScrollViewerHorizontal_ScrollChanged">
+            <TextBlock x:Uid="TextBlockScrollViewerHorizontal" x:Name="TextBlockScrollViewerHorizontal" VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="0"  />
+        </ScrollViewer>-->
+
+			<Canvas x:Uid="SurfaceCanvas" x:Name="SurfaceCanvas" Background="#02FFFFFF"/>
+		</Grid>
+	</AdornerDecorator>
+</Views:DBGridExAtomBase>
