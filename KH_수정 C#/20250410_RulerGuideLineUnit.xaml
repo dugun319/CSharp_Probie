@@ -1,0 +1,58 @@
+﻿<Grid x:Uid="GuideLineUnit" x:Class="Softpower.SmartMaker.TopControl.Components.TileAndRuler.RulerGuide.SubUnit.RulerGuideLineUnit"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+          Name="GuideLineUnit" Cursor="Hand" Background="Transparent">
+    <Grid.LayoutTransform>
+        <RotateTransform x:Uid="UnitRotateTrans" x:Name="UnitRotateTrans" Angle="0"></RotateTransform>
+    </Grid.LayoutTransform>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition x:Uid="ColumnDefinition_1" Width="8"/>
+        <ColumnDefinition x:Uid="GuideLineColumn" x:Name="GuideLineColumn"  Width="*"/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+        <RowDefinition x:Uid="RowDefinition_1" Height="8"/>
+    </Grid.RowDefinitions>
+    <Polygon x:Uid="GuideBody" 
+			 x:Name="GuideBody" 
+			 Grid.Column="0"  
+			 Points="0,0 4,0 8,4 4,8 0,8 0,0" 
+			 MouseEnter="GuideBody_MouseEnter" 
+			 MouseLeave="GuideBody_MouseLeave"/>
+	
+	<Line x:Uid="GuideLine" 
+		  x:Name="GuideLine"  
+		  Grid.Column="1" X1="0" Y1="4.2" 
+		  X2="{Binding ElementName=GuideLineUnit, Path=ActualWidth }"
+		  Y2="4.2" >
+		<Line.Style>
+			<Style TargetType="Line">
+				<!-- 기본은 이동 없이 0 -->
+				<Setter Property="RenderTransform">
+					<Setter.Value>
+						<TranslateTransform X="0"/>
+					</Setter.Value>
+				</Setter>
+				<Style.Triggers>
+					<!-- 세로일 경우에만 -4px 이동 -->
+					<DataTrigger Binding="{Binding IsVertical, RelativeSource={RelativeSource AncestorType=UserControl}}" 
+								 Value="True">
+						<Setter Property="RenderTransform">
+							<Setter.Value>
+								<TranslateTransform X="-4"/>
+							</Setter.Value>
+						</Setter>
+					</DataTrigger>
+				</Style.Triggers>
+			</Style>
+		</Line.Style>
+	</Line>
+
+	<!--<TextBlock Text="G" FontSize="5" HorizontalAlignment="Left" Foreground="White" VerticalAlignment="Center" FontWeight="Bold" >
+        <TextBlock.LayoutTransform>
+        <RotateTransform x:Name="TextRotateTrans" Angle="0"></RotateTransform>
+        </TextBlock.LayoutTransform>
+    </TextBlock>-->
+</Grid>
