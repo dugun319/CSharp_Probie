@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="./js/summernote/summernote-lite.js"></script>
+    <script src="./js/summernote/lang/summernote-ko-KR.js"></script>
+    <script src="./js/editorManager.js"></script>
+
+    <link rel="stylesheet" href="./css/summernote/summernote-lite.css">
+
+    <style>
+        .note-editor {
+            border: none !important;
+        }
+
+        @font-face {
+            font-family: 'NanumSquare';
+            font-weight: 400;
+            src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareR.eot);
+            src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareR.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareR.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareR.ttf) format("truetype");
+        }
+
+        @font-face {
+            font-family: 'NanumSquare Bold';
+            font-weight: 700;
+            src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareB.eot);
+            src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareB.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareB.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareB.ttf) format("truetype");
+        }
+
+        @font-face {
+            font-family: 'NanumSquare ExtraBold';
+            font-weight: 800;
+            src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareEB.eot);
+            src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareEB.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareEB.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareEB.ttf) format("truetype");
+        }
+
+        @font-face {
+            font-family: 'NanumSquare Light';
+            font-weight: 300;
+            src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareL.eot);
+            src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareL.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareL.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareL.ttf) format("truetype");
+        }
+
+        @font-face {
+            font-family: '나눔스퀘어';
+            font-weight: 400;
+            src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareR.eot);
+            src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareR.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareR.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareR.ttf) format("truetype");
+        }
+
+        @font-face {
+            font-family: '나눔스퀘어 Bold';
+            font-weight: 700;
+            src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareB.eot);
+            src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareB.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareB.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareB.ttf) format("truetype");
+
+        }
+
+        @font-face {
+            font-family: '나눔스퀘어 ExtraBold';
+            font-weight: 800;
+            src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareEB.eot);
+            src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareEB.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareEB.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareEB.ttf) format("truetype");
+        }
+
+        @font-face {
+            font-family: '나눔스퀘어 Light';
+            font-weight: 300;
+            src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareL.eot);
+            src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareL.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareL.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareL.ttf) format("truetype");
+        }
+
+        @font-face {
+            font-family: NanumBarunGothicOTF;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/v1/NanumBarunGothic-Bold.eot);
+        }
+
+        /* ============= Yu Gothic UI ============= */
+        /* SemiBold */
+        @font-face {
+            font-family: 'Yu Gothic UI Bold';
+            src: url('../font/Yu Gothic/YuGothB.woff2') format('woff2'), url('../font/Yu Gothic/YuGothB.woff') format('woff');
+            font-weight: bold;
+            font-style: bold;
+            font-display: block;
+        }
+
+        /* normal */
+        @font-face {
+            font-family: 'Yu Gothic UI';
+            src: url('../font/Yu Gothic/YuGothM.woff2') format('woff2'), url('../font/Yu Gothic/YuGothM.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        /* ============= Mplus ============= */
+        /* SemiBold */
+        @font-face {
+            font-family: 'Mplus 1p Bold';
+            src: url('../font/MPlus/MPLUS1p-Bold.woff2') format('woff2'), url('../font/MPlus/MPLUS1p-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: bold;
+            font-display: block;
+        }
+
+        /* normal */
+        @font-face {
+            font-family: 'Mplus 1p';
+            src: url('../font/MPlus/MPLUS1p-Regular.woff2') format('woff2'), url('../font/MPlus/MPLUS1p-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            line-height: 1.5;
+            font-family: sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-align: left;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .note-editor {
+            height: 100%;
+        }
+
+        .note-editing-area {
+            height: 100%;
+        }
+
+        .note-editable {
+            height: 100%;
+        }
+
+        .note-statusbar.locked {
+            display: none !important;
+        }
+
+        .note-editable ul {
+            list-style-position: inside !important;
+        }
+
+        .note-editable ol {
+            list-style-position: inside !important;
+        }
+
+        .table {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .table>thead>tr>td,
+        .table>thead>tr>th,
+        .table>tbody>tr>td,
+        .table>tbody>tr>th,
+        .table>tfoot>tr>td,
+        .table>tfoot>tr>th {
+            padding: 8px !important;
+            line-height: 1.4;
+            vertical-align: top;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="summernote"></div>
+
+    <script>
+        $(document).ready(() => {
+            $('#summernote').summernote({
+                height: '',                     // 에디터 높이
+                minHeight: null,                // 최소 높이
+                maxHeight: null,                // 최대 높이
+                focus: true,                    // 에디터 시작시 바로 포커싱
+                disableResizeEditor: true,      // 에디터 내 클릭조절 방지
+                placeholder: '',                // placeholder
+                lang: "ko-KR",					// 한글 설정
+                callbacks: {
+                    onInit: () => {
+                        $toolbar = $editor.next('.note-editor').find('.note-toolbar');
+                        $root = $('.note-editor').find('.note-editable');
+                        $placeholder = $('note-editor').find('.note-placeholder');
+                        $(".note-editable").on('click mouseup keyup', (e) => { callUpdateToolBar(e); });
+                        $(".note-editable").on('focus', (e) => { SmartMaker.getFocus(); });
+                        $(".note-editable").on('blur', (e) => { SmartMaker.lostFocus(); });
+                        $('.note-editable').css('color', '#000000');
+                        global.showToolbar ? showToolbar() : hideToolbar();
+                        document.onmouseup = callUpdateToolBar;
+                        document.onkeyup = callUpdateToolBar;
+                        window.onresize = onWindowResize;
+                        SmartMaker.loadingComplete();
+                    }, 
+                    onPaste: (e) => {
+                        e.preventDefault();
+                        const clipboardData = (e.originalEvent || e).clipboardData;
+                        if (!clipboardData) return;
+                        const items = clipboardData.items;
+                        if (!items) return;
+                        let hasImage = false;
+                        for (let i = 0; i < items.length; i++) {
+                            if (items[i].type.indexOf('image') !== -1) {
+                                hasImage = true;
+                                break;
+                            }
+                        }
+                        const text = clipboardData.getData('text/plain');
+                        if (text) {
+                            document.execCommand('insertText', false, text);
+                        }
+
+                        if (hasImage) {
+                            // alert('이미지 붙여넣기는 지원하지 않습니다.');
+                            return;
+                        }
+                        // 텍스트만 삽입
+                    },
+                    onImageUpload: (files) => {
+                        // alert('이미지 업로드는 지원하지 않습니다.');
+                        return false; // 이미지 업로드 자체를 막는다
+                    },
+                    onChange: (contents, $editable) => {
+                        // 에디터 내용이 변경될 때마다 호출
+                        if (typeof SmartMaker !== 'undefined' && SmartMaker.editorChanged) {
+                            SmartMaker.editorChanged(contents);
+                        }
+                    },
+                },
+            });
+        });
+
+        var $editor = $('#summernote');
+        var $toolbar;
+        var $root;
+        var $placeholder;
+
+        var unit = { px: 'px', pt: 'pt' };
+
+        var global = {
+            paddingTopBottom: 15,
+            paddingLeftRight: 13,
+            lineHeight: 1.45,
+            letterSpacing: 0,
+            fontName: '맑은 고딕',
+            fontSize: 18,
+            fontColor: '#000000',
+            fontBgColor: '#FFFFFF',
+            textAlign: 0,
+            indent: 0,
+            outdent: 0,
+            overFlow: null,
+            showToolbar: false,
+            setAll: () => {
+                setEditor_Padding_TopBottom(getEditor_Padding_TopBottom());
+                setEditor_Padding_LeftRight(getEditor_Padding_LeftRight());
+                setEditor_LineHeight(getEditor_LineHeight());
+                setEditor_LetterSpacing(getEditor_LetterSpacing());
+                if (getEditor_FontName()) { setEditor_FontName(getEditor_FontName()); }
+                setEditor_FontSize(getEditor_FontSize());
+                setEditor_FontColor(getEditor_FontColor());
+                setEditor_FontBgColor(getEditor_FontBgColor());
+                if (getEditor_OverFlow()) { setEditor_OverFlow(getEditor_OverFlow()); }
+                setEditor_TextAlign(getEditor_TextAlign());
+            }
+        };
+    </script>
+</body>
+
+</html>
